@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.login{
+    height: 100vh;
+    width: inherit;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg,#aabbcb,#cae47b, #9de9dd,#99bda7);
+    position: relative  ;
+   
+}
+
+i{
+    font-size: 60px;
+    color: #3f67ad;
+
+}
+.email{
+    width: 150%;
+    height: 20px;
+    position: relative;
+    left: -25%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #e1ffef;
+    border: none;
+
+}
+.email:focus-visible{
+ 
+    background-color: #cae47b;
+}
+#btn{
+    padding: 10px 25px 10px 25px;
+background-color: #d0930f;
+}
+
+.form{
+   
+    padding: 100px;
+    box-shadow:0px 0px 5px 5px #70706f;
+    text-align: center;
+    text-justify: center;
+}

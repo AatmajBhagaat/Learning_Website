@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Study Material with Interactive Sidebar</title>
+    <link rel="stylesheet" href="./styles/content.css">
+</head>
+<body>
+
+
+    <nav class="nav">
+         <a href="" class="logo"> 
+            <img class="logo" src="./image/Buddy 4 Fresher.png" alt="" ></a>
+        <ul type="none" style="display: flex; justify-content: space-around; flex-direction:row; align-items: center; gap: 100px;  ">
+          
+            <li><a href="./index.html"><p>Home</p></a></li>
+            <li><a href=""><p> Programs</p></a></li>
+            <li>  <a href=""> <p>Road Map</p></a></li>
+            <li> <a href=""><p>Learn Here</p></a></li>
+            <li><a href=""><p>About</p></a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <h1>HTML</h1>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Key Points</h2>
+            <nav>
+                <ul>
+                    <li><a href="#web-terminologies">Web Terminologies</a></li>
+                    <li><a href="#html-basics">HTML Basics</a></li>
+                    <li><a href="#history-of-html">History of HTML </a></li>
+                    <li><a href="#what-is-html">What is HTML?</a></li>
+                    <li><a href="#structure-of-html">Structure of HTML</a></li>
+                    <li><a href="#html-tags">HTML Tags</a></li>
+                    <li><a href="#html-elements">HTML Elements</a></li>
+                    <li><a href="#inline-vs-block">Difference Between Inline and Block Elements</a></li>
+                    <li><a href="#html-attributes">HTML Attributes</a></li>
+                    <li><a href="#formatting-tags">Formatting Tags</a></li>
+                    <li><a href="#semantic-tags">Semantic Tags (Elements)</a></li>
+                    <li><a href="#list-creation">List Creation</a></li>
+                    <li><a href="#table-creation">Table Creation</a></li>
+                    <li><a href="#image-handling">Image Handling</a></li>
+                    <li><a href="#anchor-tags">Anchor Tags</a></li>
+                    <li><a href="#form-creation">Form Creation</a></li>
+                    <li><a href="#media-tags">Media Tags</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+        <!-- web Technology -->
+            <article>
+                <h2 id="web-terminologies">Web Terminologies</h2>
+                <p><strong>WEB:</strong> It is interconnection of public websites which can be accessible through internet</p>
+                <p><strong>INTERNET:</strong> It is system of interconnected computer networks that allows users to access and share the information</p>
+                <p><strong>BROWSER:</strong> It is a standalone application through which we can access data with a help of internet and runs the websites for output</p>
+                <p><strong>SERVER:</strong> It is a combination of software and hardware that receives request and response to a request over a network</p>
+                <p><strong>WEBPAGES:</strong> It is document that is accessible by browser and it contains text, images, hyperlinks and these are also called as building blocks of websites</p>
+                <p><strong>WEBSITES:</strong> It is collection of related or interconnected webpages</p>
+            </article>
+        <!-- Basic of HTML -->
+            <article id="html-basics">
+                <h2>1. HTML Basics</h2>
+                        <!-- What is HTML? -->
+        <article>
+            <h3 id="what-is-html">What is HTML?</h3>
+            <p>HTML is hypertext markup language as well as Root front end language and reference or link to visualize the content or data on user interface by using predefined tags which are browser understandable</p>
+        </article>
+            <!-- Structure of HTML -->
+    <article>
+        <h3 id="structure-of-html">Structure of HTML</h3>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Web Development&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <p><strong>DOCTYPE TAG:</strong> It is declaration of document type which version we are using currently (HTML 5) and declaration is an instruction to the web browser about what version of HTML the page is written in.</p>
+        <p><strong>HTML TAG:</strong> It is a root tag of HTML and also it holds the language attribute</p>
+        <p><strong>HEAD TAG:</strong> Head tag will store meta data in the form of meta tag which will consist of some inbuilt characteristics, Unicode (UTF 8) and properties of device (it holds 2 meta tags) and the content written in head tag will not visible to the browser</p>
+        <p><strong>BODY TAG:</strong> The content or the structure we can write here by using all types of tags</p>
+    </article>
+                <section class="note">HTML5 is the current standard, replacing XHTML.</section>
+            </article>
+        <!-- History of HTML -->
+            <article>
+                <h2 id="history-of-html">2. History of HTML</h2>
+                <p>HTML came from the origin language XML</p>
+                <p>HTML was introduced in 1989 by Tim Berners Lee How owed company W3C (World Wide Web Company). </p>
+                <p>First version of HTML is released in 1991 - HTML 1.0</p>
+                <p>HTML 2.0 ---- 1993</p>
+                <p>HTML 3.2 ---- 1995</p>
+                <p>HTML 4.2 ---- 1997</p>
+                <p>HTML 5.0 ---- 2014</p>
+                <p>Current version of HTML means now we are using HTML 5.0</p>
+                <p>Now HTML is taking care by WHAT WG (<mark>Web HyperText Application Technology Working Group</mark>)</p>
+            </article>
+        <!-- HTML Tags -->
+            <article>
+                <h2 id="html-tags">3. HTML Tags</h2>
+                <p>Tag ---- it is a term or predefined word which will enclosed within angular braces</p>
+                <p>Ex... <code>&lt;&gt;</code> and <code>&lt;&gt;</code></p>
+                <p>Two types of tags in HTML:</p>
+                <ol>
+                    <li><strong>Paired tag:</strong> It will be having a partner or pair along with and between the two tags we will write the content
+                        <p>Ex.... <code>&lt;p&gt;&lt;/p&gt;</code>, <code>&lt;body&gt;&lt;/body&gt;</code></p>
+                    </li>
+                    <li><strong>Unpaired tag:</strong> It don’t have partner or pair along with him also called self-closing tag
+                        <p>Ex.... <code>&lt;img&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;input&gt;</code></p>
+                    </li>
+                </ol>
+
+            </article>
+
+        <!-- HTML Elements -->
+            <article>
+                <h2 id="html-elements">4. HTML Elements</h2>
+                <p>The content enclosed between a tags called HTML elements</p>
+                <p><strong>Block Level Elements:</strong></p>
+                <p>A block-level element always starts in a new line and it occupies the whole horizontal space of its parent element &amp; the height is equal to the content's height.</p>
+                <p><strong>Inline Elements:</strong></p>
+                <p>An inline element is the opposite of the block-level element. It does not start in a new line and takes up only the necessary instead of breaking the flow of the content.</p>
+            
+                <!-- Difference Between Inline and Block Elements -->
+            <article>
+                <h3 id="inline-vs-block">Difference Between Inline and Block Elements</h3>
+                <table border="1" cellspacing="0px" cellpadding="10px">
+                    <tr>
+                        <th>Inline Elements</th>
+                        <th>Block Elements</th>
+                    </tr>
+                    <tr>
+                        <td>Inline elements occupy only sufficient width required.</td>
+                        <td>Block Elements occupy the full width irrespective of their sufficiency.</td>
+                    </tr>
+                    <tr>
+                        <td>Inline elements don’t start in a new line.</td>
+                        <td>Block elements always start in a line.</td>
+                    </tr>
+                    <tr>
+                        <td>Inline elements allow other inline elements to sit behind.</td>
+                        <td>Block elements doesn’t allow other elements to sit behind</td>
+                    </tr>
+                    <tr>
+                        <td>Inline elements have top and bottom margin</td>
+                        <td>Block elements don’t have top and bottom margin.</td>
+                    </tr>
+                </table>
+            </article>
+            </article>
+
+        <!-- HTML Attributes -->
+            <article>
+                <h2 id="html-attributes">5. HTML Attributes</h2>
+                <p>It is an added extension into HTML tag.</p>
+                <p>HTML attributes provide additional information about HTML elements.</p>
+                <p>Attributes written inside always opening tag of HTML element</p>
+                <p>Ex. <code>Attribute = "attribute value";</code></p>
+                <p>Two types of attributes in HTML:</p>
+                <ol>
+                    <li><strong>Core or global attribute</strong></li>
+                    <li><strong>Element specific attribute</strong></li>
+                </ol>
+                <p><strong>Core attributes:</strong></p>
+                <ol>
+                    <li><strong>style</strong> to style our HTML element</li>
+                    <li><strong>title</strong> it will create an tool tip for HTML element</li>
+                    <li><strong>Id</strong> it will target HTML element for CSS and id should be unique</li>
+                    <li><strong>Class</strong> it will target HTML element for CSS but class can be same</li>
+                </ol>
+                <p><strong>Element specific attribute:</strong></p>
+                <p>These type of attribute will use in some specific types of tags</p>
+                <p>Ex: <code>href</code> in anchor tag</p>
+                <p><code>src</code> and <code>alt</code> ---- in img tag</p>
+            </article>
+
+         <!-- Formatting Tags -->
+            <article>
+                <h2 id="formatting-tags">6.Formatting Tags</h2>
+                <p>These tags will change the appearance of HTML element and adds visual enhancement to the text</p>
+                <ol>
+                    <li><strong>b tag</strong> - it will provide some solid weight to the content</li>
+                    <li><strong>strong tag</strong> - it will provide some solid weight to the content and with more importance</li>
+                    <li><strong>i tag</strong> - it will make content slightly bend towards forward direction</li>
+                    <li><strong>em tag</strong> - it will make content in italic form</li>
+                    <li><strong>u tag</strong> - it will add one underline to the content</li>
+                    <li><strong>ins tag</strong> - it will add one underline to the content</li>
+                    <li><strong>strike tag</strong> - it is deprecated tag. Will give over through line to content</li>
+                    <li><strong>mark tag</strong> - it will make the content highlighted</li>
+                    <li><strong>sup tag (superscript tag)</strong> - it will moves content slightly upward direction</li>
+                    <li><strong>sub tag (subscript tag)</strong> - it will moves content slightly downward direction</li>
+                    <li><strong>q tag</strong> - it will add quotation to the content (" ")</li>
+                    <li><strong>center tag</strong> - it will make your content center horizontally and its deprecated one</li>
+                    <li><strong>marquee tag</strong> - it will make your content to be run from one side till another side And in this tag you will get behavior and direction attribute as well as scrollamount attribute</li>
+                </ol>
+            </article>
+
+        <!-- Semantic Tags (Elements) -->
+            <article>
+                <h2 id="semantic-tags">7. Semantic Tags (Elements)</h2>
+                <p>A semantic element clearly describes its meaning to both the browser and the developer.</p>
+                <p>Examples of non-semantic elements: <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> - Tells nothing about its content.</p>
+                <p>Most of semantic elements are block level elements.</p>
+                <p>Examples of semantic elements: <code>&lt;form&gt;</code>, <code>&lt;table&gt;</code>, and <code>&lt;article&gt;</code> - Clearly defines its content</p>
+                <p>Semantic elements represents their meaning to both the browser and developer.</p>
+                <h3>Some Semantic Elements Are:</h3>
+                <dl>
+                    <dt><strong>H - HEADER</strong></dt>
+                    <dd>The <code>&lt;header&gt;</code> element represents a container for introductory content or a set of navigational links.</dd>
+                    <dt><strong>D - DETAILS</strong></dt>
+                    <dd>The <code>&lt;details&gt;</code> tag specifies additional details that the user can open and close on demand. The <code>&lt;details&gt;</code> tag is often used to create an interactive widget that the user can open and close. By default, the widget is closed. When open, it expands, and displays the content within. Any sort of content can be put inside the <code>&lt;details&gt;</code> tag.</dd>
+                    <dd>By summary tag we can change the name of details tag also</dd>
+                    <dt><strong>A - ASIDE</strong></dt>
+                    <dd>The <code>&lt;aside&gt;</code> tag defines some content aside from the content it is placed in.</dd>
+                    <dt><strong>M - MAIN</strong></dt>
+                    <dd>The <code>&lt;main&gt;</code> tag specifies the main content of a document. The content inside the <code>&lt;main&gt;</code> element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.</dd>
+                    <dt><strong>N - NAV</strong></dt>
+                    <dd>The <code>&lt;nav&gt;</code> element represents a section of a page that links to other pages or to parts within the page: a section with navigation links.</dd>
+                    <dt><strong>S - SECTION</strong></dt>
+                    <dd>The <code>&lt;section&gt;</code> element is a structural HTML element used to group together related elements. Each <code>&lt;section&gt;</code> typically includes one or more heading elements and additional elements presenting related content.</dd>
+                    <dt><strong>T - TABLE</strong></dt>
+                    <dd>To create table we use table tag.</dd>
+                    <dt><strong>A - ARTICLE</strong></dt>
+                    <dd>The <code>&lt;article&gt;</code> tag specifies independent, self-contained content.</dd>
+                    <dt><strong>F - FOOTER</strong></dt>
+                    <dd>The <code>&lt;footer&gt;</code> element is a structural element used to identify the footer of a page, document, article, or section. A <code>&lt;footer&gt;</code> typically contains copyright and authorship information or navigational elements pertaining to the contents of the parent element.</dd>
+                    <dt><strong>F - FORM</strong></dt>
+                    <dd>To create form in HTML we use form tag.</dd>
+                </dl>
+                <header style="background-color: #FEF3E2; width: 752px;position: relative; top: 50px;">
+                header
+                    <nav style=" border: 2px solid black; background-color: #FAB12F; height: 40px;">Navigation</nav>
+                </header>
+                <main style="background-color: rgb(249, 217, 197); height: 500px;">
+                    <section style="height: 400px; width: 490px; position: relative;left: 240px;  top:70px; background-color: #FA812F; display: flex;">Section
+                        <article style="background-color: #FA4032; position: relative; top: 70px;  width: 150px; height: 200px;">article</article>
+                        <article style="background-color: #FA4032; position: relative; top: 70px; width: 150px; height: 200px; margin-left: 10px; ">article</article>
+
+                    </section>
+                    <aside style="height: 400px; position: relative;left: 10px;  top:-330px; background-color: #cc3126; color: black;">Sidebar</aside>
+                </main>
+                <footer style="background: rgb(124, 121, 121); width: 750px;">Footer</footer>
+            </article>
+
+        <!-- List Creation -->
+            <article>
+                    <h2 id="list-creation">8. List Creation</h2>
+                    <p>The content or information written below to other or row by row</p>
+                    <p>Four types of list:</p>
+                    <h3>Ordered List</h3>
+                    <p>The ordered list can be written in two orders like numerical or alphabetical manner</p>
+                    <p><code>&lt;ol&gt;</code> tag - root tag of ordered list</p>
+                    <p><code>&lt;li&gt;</code> tag - to write list items</p>
+                    <p><strong>Ordered List Attributes:</strong></p>
+                    <ul>
+                        <li><strong>type</strong> - what type of order we need to mention (Ex. 1 (default), A, a, I, i)</li>
+                        <li><strong>start</strong> - from which order list has to be start (number)</li>
+                        <li><strong>reversed</strong> - to make order in reverse</li>
+                    </ul>
+                    <p>Example:</p>
+                    <pre>
+            &lt;ol type="1" start="10" reversed&gt;
+                &lt;li&gt;tomato&lt;/li&gt;
+                &lt;li&gt;onion&lt;/li&gt;
+                &lt;li&gt;carrot&lt;/li&gt;
+                &lt;li&gt;beat root&lt;/li&gt;
+                &lt;li&gt;cucumber&lt;/li&gt;
+            &lt;/ol&gt;
+                    </pre>
+                    <h3>Unordered List</h3>
+                    <p>Unordered list - the content written in bulleted or marked order</p>
+                    <p><code>&lt;ul&gt;</code> tag - root tag of unordered list</p>
+                    <p><strong>Unordered List Attributes:</strong></p>
+                    <ul>
+                        <li><strong>type</strong> - what type of style of order we need to mention (Ex. disc (default), circle, square, none)</li>
+                    </ul>
+                    <p>Example:</p>
+                    <pre>
+            &lt;ul type="disc"&gt;
+                &lt;li&gt;bikes&lt;/li&gt;
+                &lt;li&gt;bikes&lt;/li&gt;
+                &lt;li&gt;bikes&lt;/li&gt;
+            &lt;/ul&gt;
+                    </pre>
+                    <h3>Description List</h3>
+                    <p>This list makes the groups of list in their respective terms</p>
+                    <p><code>&lt;dl&gt;</code> tag - root tag of description list</p>
+                    <p><code>&lt;dt&gt;</code> - description term</p>
+                    <p><code>&lt;dd&gt;</code> - description data</p>
+                    <p>Example:</p>
+                    <pre>
+            &lt;dl&gt;
+                &lt;dt&gt;cars&lt;/dt&gt;
+                &lt;dd&gt;Mg hector&lt;/dd&gt;
+                &lt;dd&gt;thar&lt;/dd&gt;
+                &lt;dd&gt;benz&lt;/dd&gt;
+                &lt;dt&gt;bikes&lt;/dt&gt;
+                &lt;dd&gt;Bullet&lt;/dd&gt;
+                &lt;dd&gt;Harley&lt;/dd&gt;
+            &lt;/dl&gt;
+                    </pre>
+                    <h3>Nested List</h3>
+                    <p>A list inside another list is called nested list</p>
+            </article>
+
+        <!-- Table Creation -->
+            <article>
+                <h2 id="table-creation">9. Table Creation</h2>
+                <p>Table is logical structure of having rows and columns to store the data in specific manner</p>
+                <p><code>&lt;table&gt;&lt;/table&gt;</code> tag is root tag to create table</p>
+                <p><code>&lt;tr&gt;</code> tag is used to create table rows</p>
+                <p><code>&lt;th&gt;</code> tag is used to add table headings</p>
+                <p><code>&lt;td&gt;</code> tag is used to add table data</p>
+                <p><strong>Table tag attributes:</strong></p>
+                <ul>
+                    <li><strong>border</strong> to provide the border for table in pixels. Default will be 2 pixels</li>
+                    <li><strong>cellpadding</strong> the space between table data and table cell border. it will increase the size of each cell in table</li>
+                    <li><strong>cellspacing</strong> the space between two different cells</li>
+                </ul>
+                <p><em>Note:</em> border, cellpadding and cellspacing attributes written inside table tag</p>
+                <p><strong>rowspan</strong> to merge two or more rows and rowspan attribute have to provide in respective td or th tag from where we have to merge the rows till where we have to</p>
+                <p>Ex. <code>rowspan = "5"</code> - if you given value like this 5 rows will be merged</p>
+                <p><strong>colspan</strong> to merge two or more columns. colspan attribute have to provide in respective td or th tag from where we have to merge the columns till where we have to</p>
+                <p>Ex. <code>colspan = "3"</code> - if you given value like this 3 columns will be merged</p>
+            </article>
+        <!-- Image Handling -->
+            <article>
+                <h2 id="image-handling">10. Image Handling</h2>
+                <p>The HTML <code>&lt;img&gt;</code> tag is used to embed an image in a web page.</p>
+                <p>Images are not technically inserted into a web page; images are linked to web pages. The <code>&lt;img&gt;</code> tag creates a holding space for the referenced image.</p>
+                <p>The <code>&lt;img&gt;</code> tag is empty, it contains attributes only, and does not have a closing tag.</p>
+                <p>The <code>&lt;img&gt;</code> tag has two required attributes:</p>
+                <ul>
+                    <li><strong>src</strong> - Specifies the path to the image</li>
+                    <li><strong>alt</strong> - The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute)</li>
+                    <li><strong>height and width attribute</strong> - to set height and width of image according to our requirement we will use these attributes</li>
+                </ul>
+                <h3>Absolute URL vs Relative URL</h3>
+                <p>A full web address in the src attribute:</p>
+                <pre>&lt;img src="https://www.w3.organisation.com"&gt;</pre>
+                <p>A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):</p>
+                <pre>&lt;img src="imgSvg" id="luzwx22223333333334" src="data:image/svg+xml;base64,..."&gt;</pre>
+                <p><em>Note: The data URI example is truncated; typically, you’d replace it with a relative path like <code>"/images/example.jpg"</code>.</em></p>
+            </article>
+        <!-- Anchor Tags -->
+            <article>
+                <h2 id="anchor-tags">11. Anchor Tags</h2>
+                <p>The "href" attribute is the most important attribute of the anchor <code>&lt;a&gt;</code> tag. and which links to destination page or URL.</p>
+                <p>Syntax of HTML anchor Tag given below:</p>
+                <pre>
+        &lt;a href="....."&gt;
+            link text
+        &lt;/a&gt;
+                </pre>
+                <p><strong>Appearance of anchor links:</strong></p>
+                <p>By default, links will appear as follows in all browsers:</p>
+                <ul>
+                    <li>An unvisited link is underlined and purple</li>
+                    <li>A visited link is underlined and blue</li>
+                    <li>An active link is underlined and red</li>
+                </ul>
+                <p><strong>Ways to link anchor tag:</strong></p>
+                <ul>
+                    <li><strong>Text as a Link:</strong> To use a text as a link, just write the text inside the <code>&lt;a&gt;</code> tag with href attribute</li>
+                    <li><strong>Image as a Link:</strong> To use an image as a link, just put the <code>&lt;img&gt;</code> tag inside the <code>&lt;a&gt;</code> tag</li>
+                    <li><strong>Button as a Link:</strong> To use a button as a link, just put the <code>&lt;button&gt;</code> tag inside the <code>&lt;a&gt;</code> tag</li>
+                </ul>
+                <h3>Target Attribute in Anchor Tag</h3>
+                <p>By default, the linked page will be displayed in the current browser tab. To change this, you must specify another attribute that is target for the link.</p>
+                <p>The target attribute specifies where to open the linked document.</p>
+                <p>The target attribute can have one of the following values:</p>
+                <ul>
+                    <li><strong>_self</strong> - Default. Opens the document in the same window/tab as it was clicked</li>
+                    <li><strong>_blank</strong> - Opens the document in a new window or tab</li>
+                    <li><strong>_top</strong> - Opens the document in top of window</li>
+                    <li><strong>_parent</strong> - Opens the document in parent web page.</li>
+                </ul>
+            </article>
+        <!-- Form Creation -->
+            <article>
+                <h2 id="form-creation">12. Form Creation</h2>
+                <h3>The <code>&lt;form&gt;</code> Element</h3>
+                <p>The HTML <code>&lt;form&gt;</code> element is used to create an HTML form for user input</p>
+                <p>The <code>&lt;form&gt;</code> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+                <h3>The <code>&lt;input&gt;</code> Element</h3>
+                <p>The HTML <code>&lt;input&gt;</code> element is the most used form element.</p>
+                <p>An <code>&lt;input&gt;</code> element can be displayed in many ways, depending on the type attribute.</p>
+                <p>Example:</p>
+                <pre>
+        &lt;input type="text"&gt;
+        &lt;input type="radio"&gt;
+        &lt;input type="checkbox"&gt;
+        &lt;input type="tel"&gt;
+        &lt;input type="password"&gt; and so on..........
+                </pre>
+                <h3>Basic Tags of Form Creation</h3>
+                <ol>
+                    <li><strong>input tag</strong> ---- it is unpaired tag and defines an input control and also an type</li>
+                    <li><strong>label tag</strong> ---- to mention a label for respective input</li>
+                    <li><strong>textarea</strong> ---- Defines a multiline input control (text area)</li>
+                    <li><strong>fieldset</strong> ---- Groups related elements in a form</li>
+                    <li><strong>legend</strong> ---- Defines a caption for a <code>&lt;fieldset&gt;</code> element</li>
+                    <li><strong>select</strong> ---- Defines a choosable drop-down list</li>
+                    <li><strong>optgroup</strong> ---- Defines a group of related options in a drop-down list</li>
+                    <li><strong>option</strong> ---- Defines an option in a drop-down list</li>
+                    <li><strong>button</strong> ---- Defines a clickable button</li>
+                </ol>
+                <h3>Basic Attributes of Form</h3>
+                <ul>
+                    <li><strong>type</strong> ---- it will specify which type of data we should enter in the input box ex. text, number, date, tel, radio, checkbox, file, password etc.</li>
+                    <li><strong>for and id</strong> ---- <code>for</code> in label tag and <code>id</code> in input tag. To connect the label tag and respective input tag with it we use for and id attribute. The value should be same in both the attributes</li>
+                    <li><strong>name</strong> ---- the attribute specifies the result in navigator after submission of form</li>
+                    <li><strong>value</strong> ---- the attribute specifies the validation for type (radio) where you have to choose any one option or multiple options (checkbox)</li>
+                </ul>
+                <h3>Validation Attributes of Form</h3>
+                <ul>
+                    <li><strong>readonly:</strong> The input readonly attribute specifies that an input is read-only field which means we cannot write inside that input but we can click</li>
+                    <li><strong>disabled:</strong> The input disabled attribute specifies that an input field is disabled. A disabled input field is unusable and un-clickable.</li>
+                    <li><strong>size:</strong> The input size attribute specifies the visible width, in characters, of an input field. The default size is 20. Note: The size attribute works with the following input types: text, tel, email, and password.</li>
+                    <li><strong>maxlength:</strong> The input maxlength attribute specifies the maximum number of characters allowed in an input field.</li>
+                    <li><strong>min &amp; max:</strong> The input min and max attributes specify the minimum and maximum values for an input field.</li>
+                    <li><strong>placeholder:</strong> The input placeholder attribute specifies a short hint that describes the expected value of an input field. It shows the faint or false text in input box and whenever you will enter the data it will disappear</li>
+                    <li><strong>required:</strong> The input required attribute specifies that an input field must be filled out before submitting the form.</li>
+                    <li><strong>autofocus:</strong> By using this attribute whenever you will load the webpage the targeted input field get automatically focused</li>
+                    <li><strong>checked:</strong> The checked attribute is a When present, it specifies that an <code>&lt;input&gt;</code> element should be pre-selected (checked) when the page loads.</li>
+                    <li><strong>pattern:</strong> This attribute specifies the valuable password for password type and it has syntax like <code>pattern="[A-Za-z0-9]{}"</code></li>
+                </ul>
+            </article>
+        <!-- Media Tags -->
+            <article>
+                <h2 id="media-tags">13. Media Tags</h2>
+                <p>Multimedia on the web is sound, music, videos, movies.</p>
+                <p>HTML media consist of audio, video, maps and QR code.</p>
+                <h3>Audio</h3>
+                <p><code>&lt;audio&gt;</code> tag is used to embed the audio into our web page.</p>
+                <p>The content which is written inside <code>&lt;audio&gt;&lt;/audio&gt;</code> will not displayed on the webpage</p>
+                <p><strong>Attributes of audio tag:</strong></p>
+                <ul>
+                    <li><strong>src:</strong> We will pass path of audio. (relative path -- good practice)</li>
+                    <li><strong>controls:</strong> The controls attribute adds audio controls, like play, pause, and volume</li>
+                    <li><strong>muted:</strong> It will mute the audio when you open your file with browser</li>
+                    <li><strong>autoplay:</strong> It will play the audio automatically when you open your file with browser.</li>
+                    <li><strong>loop:</strong> The audio will start over again, every time it is finished.</li>
+                </ul>
+                <h3>Video Tag</h3>
+                <p><code>&lt;video&gt;</code> tag is used to embed the video into our web page.</p>
+                <p>The content which is written inside <code>&lt;video&gt;&lt;/video&gt;</code> will not displayed on the webpage</p>
+                <p><strong>Attributes of video tag:</strong></p>
+                <ul>
+                    <li><strong>src:</strong> We will pass path of video.</li>
+                    <li><strong>controls:</strong> The controls attribute adds video controls, like play, pause, and volume</li>
+                    <li><strong>muted:</strong> It will mute the video when you open your file with browser</li>
+                    <li><strong>autoplay:</strong> It will play the video automatically when you open your file with browser.</li>
+                    <li><strong>loop:</strong> The video will start over again, every time it is finished.</li>
+                </ul>
+                <h3>Iframe Tag</h3>
+                <p><code>&lt;iframe&gt;</code> tag is used to embed another document within the current HTML document.</p>
+                <p>An HTML iframe is used to display a web page within a web page.</p>
+                <p>The HTML <code>&lt;iframe&gt;</code> tag specifies an inline frame.</p>
+                <p><strong>Attributes:</strong></p>
+                <ul>
+                    <li><strong>height and width</strong> attributes are used to specify the height and width of the iframe</li>
+                    <li><strong>title</strong> attribute is used to give the title for the iframe</li>
+                </ul>
+            </article>
+
+
+     
+
+        </main>
+    </div>
+
+
+    <script src="./scripts/learn.js"></script>
+</body>
+</html>

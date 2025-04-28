@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programs Collection</title>
+    <link rel="stylesheet" href="./styles/content.css">
+</head>
+<nav class="nav">
+    <a href="" class="logo"> 
+       <img class="logo" src="./image/Buddy 4 Fresher.png" alt="" ></a>
+   <ul type="none" style="display: flex; justify-content: space-around; flex-direction:row; align-items: center; gap: 100px;  ">
+     
+       <li><a href="./index.html"><p>Home</p></a></li>
+       <li><a href="./programs.html"><p> Programs</p></a></li>
+       <li>  <a href="./roadmap.html"> <p>Road Map</p></a></li>
+       <li> <a href=""><p>Learn Here</p></a></li>
+       <li><a href="./about.html"><p>About</p></a></li>
+   </ul>
+</nav>
+<body>
+    <header>
+        <h1>Java Programs Collection</h1>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Program Categories</h2>
+            <nav>
+                <ul>
+                    <li><a href="#basic">Basic Programs</a></li>
+                    <li><a href="#array">Array Programs</a></li>
+                    <li><a href="#string">String Programs</a></li>
+                    <li><a href="#pattern">Pattern Programs</a></li>
+                    <li><a href="#series">Number Series Programs</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <!-- Basic Programs -->
+            <article id="basic">
+                <h2>Basic Programs</h2>
+                <section>
+                    <h3>1. Hello World</h3>
+                    <p>This program prints "Hello, World!" to the console.</p>
+                    <pre><code class="language-java">
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Hello, World!</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> This is the simplest Java program. It uses the <code>System.out.println</code> method to print the text "Hello, World!" to the console.
+                    </div>
+                </section>
+                <section>
+                    <h3>2. Sum of Two Numbers</h3>
+                    <p>This program calculates the sum of two hardcoded numbers and prints the result.</p>
+                    <pre><code class="language-java">
+public class Sum {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+        int sum = a + b;
+        System.out.println("Sum: " + sum);
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Sum: 15</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program declares two integer variables, adds them, and prints the result using string concatenation.
+                    </div>
+                </section>
+                <section>
+                    <h3>3. Check Even or Odd</h3>
+                    <p>This program checks if a hardcoded number is even or odd.</p>
+                    <pre><code class="language-java">
+public class EvenOdd {
+    public static void main(String[] args) {
+        int num = 7;
+        if(num % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Odd</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program uses the modulo operator (%) to check if the number is divisible by 2. If yes, it's even; otherwise, it's odd.
+                    </div>
+                </section>
+            </article>
+
+            <!-- Array Programs -->
+            <article id="array">
+                <h2>Array Programs</h2>
+                <section>
+                    <h3>1. Find Maximum in Array</h3>
+                    <p>This program finds the maximum element in an array.</p>
+                    <pre><code class="language-java">
+public class MaxInArray {
+    public static void main(String[] args) {
+        int[] arr = {3, 5, 7, 2, 8};
+        int max = arr[0];
+        for(int i = 1; i < arr.length; i++) {
+            if(arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println("Maximum: " + max);
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Maximum: 8</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program initializes <code>max</code> with the first element and iterates through the array, updating <code>max</code> whenever a larger element is found.
+                    </div>
+                </section>
+                <section>
+                    <h3>2. Reverse an Array</h3>
+                    <p>This program reverses an array in place.</p>
+                    <pre><code class="language-java">
+public class ReverseArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        for(int i = 0; i < arr.length / 2; i++) {
+            int temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
+        System.out.println("Reversed array: " + java.util.Arrays.toString(arr));
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Reversed array: [5, 4, 3, 2, 1]</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program swaps elements from the start and end of the array, moving towards the center, effectively reversing the array.
+                    </div>
+                </section>
+                <section>
+                    <h3>3. Bubble Sort</h3>
+                    <p>This program sorts an array using the bubble sort algorithm.</p>
+                    <pre><code class="language-java">
+public class BubbleSort {
+    public static void main(String[] args) {
+        int[] arr = {5, 3, 8, 2, 1};
+        for(int i = 0; i < arr.length - 1; i++) {
+            for(int j = 0; j < arr.length - 1 - i; j++) {
+                if(arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("Sorted array: " + java.util.Arrays.toString(arr));
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Sorted array: [1, 2, 3, 5, 8]</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> Bubble sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The largest elements "bubble up" to the end.
+                    </div>
+                </section>
+            </article>
+
+            <!-- String Programs -->
+            <article id="string">
+                <h2>String Programs</h2>
+                <section>
+                    <h3>1. Check Palindrome</h3>
+                    <p>This program checks if a string is a palindrome.</p>
+                    <pre><code class="language-java">
+public class Palindrome {
+    public static void main(String[] args) {
+        String str = "radar";
+        boolean isPalindrome = true;
+        for(int i = 0; i < str.length() / 2; i++) {
+            if(str.charAt(i) != str.charAt(str.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        System.out.println("Is palindrome: " + isPalindrome);
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Is palindrome: true</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program compares characters from the start and end of the string, moving towards the center. If all corresponding characters match, it's a palindrome.
+                    </div>
+                </section>
+                <section>
+                    <h3>2. Count Vowels</h3>
+                    <p>This program counts the number of vowels in a string.</p>
+                    <pre><code class="language-java">
+public class VowelCount {
+    public static void main(String[] args) {
+        String str = "hello world";
+        int count = 0;
+        for(char c : str.toCharArray()) {
+            if("aeiouAEIOU".indexOf(c) != -1) {
+                count++;
+            }
+        }
+        System.out.println("Number of vowels: " + count);
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Number of vowels: 3</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program iterates through each character in the string and checks if it is a vowel (a, e, i, o, u, case-insensitive). It increments a counter for each vowel found.
+                    </div>
+                </section>
+                <section>
+                    <h3>3. Reverse String</h3>
+                    <p>This program reverses a string.</p>
+                    <pre><code class="language-java">
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "hello";
+        String reversed = "";
+        for(int i = str.length() - 1; i >= 0; i--) {
+            reversed += str.charAt(i);
+        }
+        System.out.println("Reversed string: " + reversed);
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Reversed string: olleh</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program builds a new string by appending characters from the original string in reverse order, starting from the last character.
+                    </div>
+                </section>
+            </article>
+
+            <!-- Pattern Programs -->
+            <article id="pattern">
+                <h2>Pattern Programs</h2>
+                <section>
+                    <h3>1. Pyramid Pattern</h3>
+                    <p>This program prints a pyramid pattern with 5 rows.</p>
+                    <pre><code class="language-java">
+public class Pyramid {
+    public static void main(String[] args) {
+        int rows = 5;
+        for(int i = 1; i <= rows; i++) {
+            for(int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            for(int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>
+    *
+   ***
+  *****
+ *******
+*********
+                        </pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program uses two nested loops: one for printing spaces before the stars and another for printing the stars. The number of stars increases with each row.
+                    </div>
+                </section>
+                <section>
+                    <h3>2. Diamond Pattern</h3>
+                    <p>This program prints a diamond pattern with 5 rows on each half.</p>
+                    <pre><code class="language-java">
+public class Diamond {
+    public static void main(String[] args) {
+        int rows = 5;
+        for(int i = 1; i <= rows; i++) {
+            for(int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            for(int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i = rows - 1; i >= 1; i--) {
+            for(int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            for(int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+                        </pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program first prints the upper half of the diamond (similar to the pyramid) and then mirrors it to create the lower half.
+                    </div>
+                </section>
+                <section>
+                    <h3>3. Number Pattern</h3>
+                    <p>This program prints a number pattern like 1, 12, 123, etc.</p>
+                    <pre><code class="language-java">
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+        for(int i = 1; i <= rows; i++) {
+            for(int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>
+1
+12
+123
+1234
+12345
+                        </pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The outer loop controls the number of rows, and the inner loop prints numbers from 1 to the current row number.
+                    </div>
+                </section>
+            </article>
+
+            <!-- Number Series Programs -->
+            <article id="series">
+                <h2>Number Series Programs</h2>
+                <section>
+                    <h3>1. Fibonacci Series</h3>
+                    <p>This program generates the Fibonacci series up to 10 terms.</p>
+                    <pre><code class="language-java">
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n = 10;
+        int a = 0, b = 1;
+        System.out.print(a + " " + b + " ");
+        for(int i = 2; i < n; i++) {
+            int next = a + b;
+            System.out.print(next + " ");
+            a = b;
+            b = next;
+        }
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>0 1 1 2 3 5 8 13 21 34</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program starts with the first two numbers of the Fibonacci sequence (0 and 1) and generates the next numbers by adding the two previous numbers.
+                    </div>
+                </section>
+                <section>
+                    <h3>2. Check Prime Number</h3>
+                    <p>This program checks if a number is prime.</p>
+                    <pre><code class="language-java">
+public class PrimeCheck {
+    public static void main(String[] args) {
+        int num = 17;
+        boolean isPrime = true;
+        if(num <= 1) {
+            isPrime = false;
+        } else {
+            for(int i = 2; i <= Math.sqrt(num); i++) {
+                if(num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        System.out.println("Is prime: " + isPrime);
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Is prime: true</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program checks if the number is divisible by any number from 2 to the square root of the number. If it is, the number is not prime.
+                    </div>
+                </section>
+                <section>
+                    <h3>3. Factorial</h3>
+                    <p>This program calculates the factorial of a number.</p>
+                    <pre><code class="language-java">
+public class Factorial {
+    public static void main(String[] args) {
+        int num = 5;
+        long factorial = 1;
+        for(int i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        System.out.println("Factorial: " + factorial);
+    }
+}
+                    </code></pre>
+                    <div class="output">
+                        <strong>Output:</strong>
+                        <pre>Factorial: 120</pre>
+                    </div>
+                    <div class="explanation">
+                        <strong>Explanation:</strong> The program uses a loop to multiply numbers from 1 to the given number to calculate the factorial.
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+
+<script src="./scripts/learn.js"></script>
+</body>
+</html>

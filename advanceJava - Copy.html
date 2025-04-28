@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Java Study Material with Interactive Sidebar</title>
+    <link rel="stylesheet" href="./styles/content.css">
+
+</head>
+<body>
+    <nav class="nav">
+        <a href="" class="logo"> 
+           <img class="logo" src="./image/Buddy 4 Fresher.png" alt="" ></a>
+       <ul type="none" style="display: flex; justify-content: space-around; flex-direction:row; align-items: center; gap: 100px;  ">
+         
+           <li><a href="./index.html"><p>Home</p></a></li>
+           <li><a href=""><p> Programs</p></a></li>
+           <li>  <a href=""> <p>Road Map</p></a></li>
+           <li> <a href=""><p>Learn Here</p></a></li>
+           <li><a href=""><p>About</p></a></li>
+       </ul>
+   </nav>
+    <header>
+        <h1>Advanced Java Study Material</h1>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Key Points</h2>
+            <nav>
+                <ul>
+                    <li><a href="#jdbc">JDBC: Database Connectivity</a></li>
+                    <li><a href="#servlets">Servlets: Web Applications</a></li>
+                    <li><a href="#jsp">JSP: Java Server Pages</a></li>
+                    <li><a href="#hibernate">Hibernate: ORM Framework</a></li>
+                    <li><a href="#spring">Spring: Dependency Injection</a></li>
+                    <li><a href="#spring-boot">Spring Boot: Simplified Spring</a></li>
+                    <li><a href="#jpa">JPA: Persistence API</a></li>
+                    <li><a href="#rmi">RMI: Remote Method Invocation</a></li>
+                    <li><a href="#jms">JMS: Messaging Service</a></li>
+                    <li><a href="#multithreading">Advanced Multithreading</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <article id="jdbc">
+                <h2>1. JDBC (Java Database Connectivity)</h2>
+                <p>JDBC provides an API to connect Java applications to databases.</p>
+                <pre>
+import java.sql.*;
+
+public class JdbcExample {
+    public static void main(String[] args) throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/mydb";
+        Connection conn = DriverManager.getConnection(url, "user", "pass");
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM users");
+        
+        while (rs.next()) {
+            System.out.println(rs.getString("name"));
+        }
+        conn.close();
+    }
+}
+                </pre>
+                <p><b>Detailed Explanation:</b></p>
+                <ul>
+                    <li><b>DriverManager:</b> Establishes connection</li>
+                    <li><b>Statement:</b> Executes SQL queries</li>
+                    <li><b>ResultSet:</b> Holds query results</li>
+                    <li><b>PreparedStatement:</b> Prevents SQL injection</li>
+                </ul>
+                <section class="note">Always close connections to avoid leaks.</section>
+            </article>
+
+            <article id="servlets">
+                <h2>2. Servlets</h2>
+                <p>Servlets handle HTTP requests in web applications.</p>
+                <pre>
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class MyServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+            throws ServletException, IOException {
+        resp.setContentType("text/html");
+        PrintWriter out = resp.getWriter();
+        out.println("<h1>Hello from Servlet</h1>");
+    }
+}
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>doGet/doPost:</b> Handle GET/POST requests</li>
+                    <li><b>HttpServlet:</b> Base class for HTTP servlets</li>
+                    <li><b>web.xml:</b> Configuration (older approach)</li>
+                </ul>
+            </article>
+
+            <article id="jsp">
+                <h2>3. JSP (Java Server Pages)</h2>
+                <p>JSP embeds Java code in HTML for dynamic web content.</p>
+                <pre>
+<%@ page language="java" contentType="text/html" %>
+<html>
+<body>
+    <h1>Hello, <%= request.getParameter("name") %></h1>
+    <% for(int i = 0; i < 3; i++) { %>
+        <p>Line <%= i %></p>
+    <% } %>
+</body>
+</html>
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b><% %>:</b> Scriptlets for Java code</li>
+                    <li><b><%= %>:</b> Expressions for output</li>
+                    <li><b>Directives:</b> Configure page</li>
+                </ul>
+                <section class="note">Use JSP with servlets for MVC.</section>
+            </article>
+
+            <article id="hibernate">
+                <h2>4. Hibernate</h2>
+                <p>Hibernate is an ORM (Object-Relational Mapping) framework.</p>
+                <pre>
+import org.hibernate.*;
+import org.hibernate.cfg.*;
+
+@Entity
+public class User {
+    @Id
+    private int id;
+    private String name;
+    // Getters and setters
+}
+
+SessionFactory factory = new Configuration().configure().buildSessionFactory();
+Session session = factory.openSession();
+Transaction tx = session.beginTransaction();
+session.save(new User(1, "Alice"));
+tx.commit();
+session.close();
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>@Entity:</b> Maps class to table</li>
+                    <li><b>Session:</b> Manages persistence</li>
+                    <li><b>HQL:</b> Hibernate Query Language</li>
+                </ul>
+            </article>
+
+            <article id="spring">
+                <h2>5. Spring Framework</h2>
+                <p>Spring provides dependency injection and more.</p>
+                <pre>
+import org.springframework.context.annotation.*;
+
+@Component
+public class MyService {
+    public String getMessage() { return "Hello"; }
+}
+
+@Configuration
+@ComponentScan("com.example")
+public class AppConfig {
+    public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        MyService service = context.getBean(MyService.class);
+        System.out.println(service.getMessage());
+    }
+}
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>@Component:</b> Auto-detected bean</li>
+                    <li><b>IoC:</b> Inversion of Control</li>
+                    <li><b>AOP:</b> Aspect-Oriented Programming</li>
+                </ul>
+            </article>
+
+            <article id="spring-boot">
+                <h2>6. Spring Boot</h2>
+                <p>Spring Boot simplifies Spring setup.</p>
+                <pre>
+import org.springframework.boot.*;
+import org.springframework.web.bind.annotation.*;
+
+@SpringBootApplication
+@RestController
+public class Application {
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, Spring Boot!";
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>@SpringBootApplication:</b> Auto-config</li>
+                    <li><b>Embedded Server:</b> Tomcat/Jetty</li>
+                    <li><b>REST:</b> Easy API creation</li>
+                </ul>
+            </article>
+
+            <article id="jpa">
+                <h2>7. JPA (Java Persistence API)</h2>
+                <p>JPA standardizes ORM in Java.</p>
+                <pre>
+import javax.persistence.*;
+
+@Entity
+public class Employee {
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String name;
+    // Getters and setters
+}
+
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("myPU");
+EntityManager em = emf.createEntityManager();
+em.getTransaction().begin();
+em.persist(new Employee("Bob"));
+em.getTransaction().commit();
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>@Entity:</b> Maps to table</li>
+                    <li><b>EntityManager:</b> CRUD operations</li>
+                    <li><b>JPQL:</b> Query language</li>
+                </ul>
+            </article>
+
+            <article id="rmi">
+                <h2>8. RMI (Remote Method Invocation)</h2>
+                <p>RMI enables distributed object communication.</p>
+                <pre>
+import java.rmi.*;
+
+public interface RemoteService extends Remote {
+    String sayHello() throws RemoteException;
+}
+
+public class RemoteServiceImpl extends UnicastRemoteObject implements RemoteService {
+    public RemoteServiceImpl() throws RemoteException {}
+    public String sayHello() { return "Hello from RMI"; }
+}
+
+Registry registry = LocateRegistry.createRegistry(1099);
+registry.bind("Service", new RemoteServiceImpl());
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>Remote:</b> Interface for remote calls</li>
+                    <li><b>Registry:</b> Naming service</li>
+                    <li><b>Unicast:</b> Single server instance</li>
+                </ul>
+            </article>
+
+            <article id="jms">
+                <h2>9. JMS (Java Messaging Service)</h2>
+                <p>JMS facilitates asynchronous messaging.</p>
+                <pre>
+import javax.jms.*;
+
+ConnectionFactory factory = new ActiveMQConnectionFactory("tcp://localhost:61616");
+Connection conn = factory.createConnection();
+Session session = conn.createSession(false, Session.AUTO_ACKNOWLEDGE);
+Queue queue = session.createQueue("myQueue");
+MessageProducer producer = session.createProducer(queue);
+TextMessage msg = session.createTextMessage("Hello JMS");
+producer.send(msg);
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>Queue/Topic:</b> Point-to-point/pub-sub</li>
+                    <li><b>Producer/Consumer:</b> Send/receive</li>
+                    <li><b>Providers:</b> ActiveMQ, RabbitMQ</li>
+                </ul>
+            </article>
+
+            <article id="multithreading">
+                <h2>10. Advanced Multithreading</h2>
+                <p>Advanced techniques for concurrent programming.</p>
+                <pre>
+import java.util.concurrent.*;
+
+ExecutorService executor = Executors.newFixedThreadPool(2);
+executor.submit(() -> System.out.println("Task 1"));
+executor.submit(() -> System.out.println("Task 2"));
+
+synchronized (this) {
+    // Critical section
+}
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>ExecutorService:</b> Thread pool management</li>
+                    <li><b>synchronized:</b> Thread safety</li>
+                    <li><b>Locks:</b> Advanced synchronization</li>
+                </ul>
+            </article>
+        </main>
+    </div>
+
+    <script src="./scripts/learn.js"></script>
+
+</body>
+</html>

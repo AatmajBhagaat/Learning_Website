@@ -1,0 +1,606 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+} 
+.nav{
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    box-shadow: 0px 5px 5px 2px rgb(233, 232, 232);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav  .Login{
+    display: flex;
+    position: relative;
+    
+
+}
+
+.nav .Login .login{
+    border-radius: 20px;
+    background-color: #b3e6cc;
+    padding: 10px 25px 10px 20px;
+    position: relative;
+    left: -20px;
+    padding-left: 35px;
+}
+.Login a{
+    color: black;
+} 
+
+.nav .Login .login:hover{
+    background-color:   #53c68c;
+}
+
+
+.nav .logo{
+    height: 100px;
+    width: 120px;
+    padding-left: 20px;
+}
+.nav a{
+    text-decoration: none;
+}
+.nav h1{
+    
+    color: rgb(121, 118, 118);
+}
+.nav article h1:hover{
+    transition: 0.1s;
+   border-bottom: 3px solid #f3b414;
+  
+}
+
+
+.Heading{
+    /* display: grid; */
+    height: 650px;
+    width: 100%;
+    background-color:#1a1c30;
+   
+}
+ .cont{
+    display: flex; 
+    
+    
+    justify-content: center;
+    
+ }
+ .cont #cont{
+
+    font-size: 50px;
+    position: relative;
+    top: 200px;
+    color: #fff;
+    font-weight: 1000;
+}
+.cont h1{
+    font-weight: 600;
+    
+}
+.cont p{
+    font-size: 17px;
+    font-weight: 500;
+    color: #f7f05f;
+}
+
+.cont img {
+
+    height: 250px;
+   position: relative;
+   left: 110%;
+   top: -50%;
+}
+
+#icon{
+    font-size: 40px;
+    font-weight: 900;
+
+    color: #1a1c30;
+    width: 8%;
+    height:9% ;
+    display: block;
+    position: relative;
+    left: 85%;
+    top: -9.2%;
+
+
+
+}
+
+
+
+#search{
+    height: 10%;
+    width: 90%;
+    position: relative;
+    left: 5%;
+   border-radius: 20px;
+    padding-left: 5%;
+
+
+
+}
+
+.HTML{
+    height: inherit;
+    width: 100%;
+    background-color: #D9EEE1;
+    position: relative;
+    top: -6.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+.HTML h1 {
+
+    font-size: 60px;
+    font-weight: 600;
+}
+.HTML a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100px;
+    padding: 15px 30px 15px 30px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+
+}
+.HTML #learn{
+    background-color: #2edba4;
+}
+.HTML #learn:hover{
+    background-color: #04d493;
+}
+
+.HTML #ref{
+    background-color: #ee9292;
+}
+.HTML #ref:hover{
+    background-color: #f87c7c;
+}
+
+.HTML .exp{
+    width: 400px;
+    height: inherit;
+    background-color: #ebebeb;
+    position: relative;
+    top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px 2px #cdcbcb;
+    
+
+}
+.exp h1{
+    font-size: 22px;
+    padding:10px 0px 30px 20px;
+}
+
+.HTML .exp .htmlCode{
+    width: 320px;
+    height: 350px;
+    border-left: 4px solid #f3b414;
+    background-color: #fff;
+    position:relative;
+    bottom:10px;
+    left:20px;
+
+}
+.exp .htmlCode:hover{
+    border-left: 4px solid #33ff4ba9;
+}
+.exp a{
+    font-size: 16px;
+    width: 120px;
+    padding:10px 20px 10px 20px;
+    border: 2px solid black;
+    background-color: #f3b414;
+    position: relative;
+    left: 20px;
+    margin-bottom: 20px;
+}
+.css{
+    height: inherit;
+    width: 100%;
+    
+    position: relative;
+    top: -6.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    background-color: #C7D9DD;
+}
+
+.css h1 {
+
+    font-size: 60px;
+    font-weight: 600;
+}
+.css a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100px;
+    padding: 15px 30px 15px 30px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+
+}
+.css #learn{
+    background-color: #2edba4;
+}
+.css #learn:hover{
+    background-color: #04d493;
+}
+
+.css #ref{
+    background-color: #ee9292;
+}
+.css #ref:hover{
+    background-color: #f87c7c;
+}
+
+.css .exp{
+    width: 400px;
+    height: inherit;
+    background-color: #ebebeb;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px 2px rgb(205, 203, 203);
+    
+
+}
+
+.exp h1{
+    font-size: 22px;
+    padding:10px 0px 30px 20px;
+}
+
+.css .exp .cssCode{
+    width: 320px;
+    height: 350px;
+    border-left: 4px solid #f3b414;
+    background-color: #fff;
+    position:relative;
+    bottom:10px;
+    left:20px;
+
+}
+.cssCode .css-Code{
+    margin-left:10px ;
+}
+.exp .cssCode:hover{
+    border-left: 4px solid #33ff4ba9;
+}
+.exp a{
+    font-size: 16px;
+    width: 120px;
+    padding:10px 20px 10px 20px;
+    border: 2px solid black;
+    background-color: #f3b414;
+    position: relative;
+    left: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* css for js section */
+
+.js{
+    height: inherit;
+    width: 100%;
+    
+    position: relative;
+    top: -6.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    
+    background-color: #2f3132;
+
+}
+
+.js h1 {
+
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.js p{
+    color: #fff;
+}
+.js a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100px;
+    padding: 15px 30px 15px 30px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+
+}
+.js #learn{
+    background-color: #2edba4;
+    width: 9rem;
+}
+.js #learn:hover{
+    background-color: #04d493;
+}
+
+.js #ref{
+    background-color: #ee9292;
+    margin-left: 1.2rem;
+}
+.js #ref:hover{
+    background-color: #f87c7c;
+}
+
+.js .exp{
+    width: 400px;
+    height: inherit;
+    background-color: #ebebeb;
+    position: relative;
+    top: 20px;
+    left: -50px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px 2px #cdcbcb;
+    
+
+}
+
+.exp h1{
+    font-size: 22px;
+    padding:10px 0px 30px 20px;
+    color: #000;
+}
+
+.js .exp .jsCode{
+    width: 320px;
+    height: 350px;
+    border-left: 4px solid #f3b414;
+    background-color: #fff;
+    position:relative;
+    bottom:10px;
+    left:20px;
+
+}
+.jsCode .js-Code{
+    margin-left:20px ;
+}
+.exp .jsCode:hover{
+    border-left: 4px solid #33ff4ba9;
+}
+.exp a{
+    font-size: 16px;
+    width: 120px;
+    padding:10px 20px 10px 20px;
+    border: 2px solid black;
+    background-color: #f3b414;
+    position: relative;
+    left: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*CSS for sql section */ 
+.sql{
+    height: inherit;
+    width: 100%;
+    
+    position: relative;
+    top: -6.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    background-color: #FEEE91;
+}
+
+.sql h1 {
+
+    font-size: 60px;
+    font-weight: 600;
+}
+.sql a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100px;
+    padding: 15px 30px 15px 30px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+
+}
+.sql #learn{
+    background-color: #2edba4;
+}
+.sql #learn:hover{
+    background-color: #04d493;
+}
+
+.sql #ref{
+    background-color: #ee9292;
+}
+.sql #ref:hover{
+    background-color: #f87c7c;
+}
+
+.sql .exp{
+    width: 400px;
+    height: inherit;
+    background-color: #ebebeb;
+    position: relative;
+    top: 20px;
+    left: -10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px 2px rgb(205, 203, 203);
+    
+
+}
+
+.exp h1{
+    font-size: 22px;
+    padding:10px 0px 30px 20px;
+}
+
+.sql .exp .sqlCode{
+    width: 320px;
+    height: 350px;
+    border-left: 4px solid #f3b414;
+    background-color: #fff;
+    position:relative;
+    bottom:10px;
+    left:20px;
+
+}
+.sqlCode .sql-Code{
+    margin-left:20px ;
+}
+.exp .sqlCode:hover{
+    border-left: 4px solid #33ff4ba9;
+}
+.exp a{
+    font-size: 16px;
+    width: 120px;
+    padding:10px 20px 10px 20px;
+    border: 2px solid black;
+    background-color: #f3b414;
+    position: relative;
+    left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Java CSS */
+.java{
+    height: inherit;
+    width: 100%;
+    
+    position: relative;
+    top: -6.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    background-color: #fdaf78;
+}
+
+
+.java h1 {
+
+    font-size: 60px;
+    font-weight: 600;
+}
+.java a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100px;
+    padding: 15px 30px 15px 30px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+
+}
+.java #learn{
+    background-color: #2edba4;
+}
+.java #learn:hover{
+    background-color: #04d493;
+}
+
+.java #ref{
+    background-color: #ee9292;
+}
+.java #ref:hover{
+    background-color: #f87c7c;
+}
+
+.java .exp{
+    width: 400px;
+    height: inherit;
+    background-color: #ebebeb;
+    position: relative;
+    top: 20px;
+    left: -40px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px 2px rgb(205, 203, 203);
+    
+
+}
+
+.java h1{
+    font-size: 22px;
+    padding:10px 0px 30px 20px;
+}
+
+.java .exp .javaCode{
+    width: 320px;
+    height: 350px;
+    border-left: 4px solid #f3b414;
+    background-color: #fff;
+    position:relative;
+    bottom:10px;
+    left:20px;
+
+}
+.javaCode .java-Code{
+    margin-left:20px ;
+}
+.exp .javaCode:hover{
+    border-left: 4px solid #33ff4ba9;
+}
+.exp a{
+    font-size: 16px;
+    width: 120px;
+    padding:10px 20px 10px 20px;
+    border: 2px solid black;
+    background-color: #f3b414;
+    position: relative;
+    left: 20px;
+    margin-bottom: 20px;
+}
+
+
+.footer
+{
+    height: 100px;
+    width: 100%;
+   display: flex;
+    background-color: black;
+    position: relative;
+    top: 50px;
+}
+.con{
+    display: flex;
+    position: absolute;
+    left: 80%;
+  
+}
+.con i,p{
+    margin:10px 10px 10px 10px;
+}
+.foot-icon {
+    font-size: 30px;
+    position: absolute;
+    left: 90%;
+    top:50px;
+}

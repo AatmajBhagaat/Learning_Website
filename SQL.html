@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Study Material with Interactive Sidebar</title>
+    <link rel="stylesheet" href="./styles/content.css">
+ 
+</head>
+<body>
+    <nav class="nav">
+        <a href="" class="logo"> 
+           <img class="logo" src="./image/Buddy 4 Fresher.png" alt="" ></a>
+       <ul type="none" style="display: flex; justify-content: space-around; flex-direction:row; align-items: center; gap: 100px;  ">
+         
+           <li><a href="./index.html"><p>Home</p></a></li>
+           <li><a href=""><p> Programs</p></a></li>
+           <li>  <a href=""> <p>Road Map</p></a></li>
+           <li> <a href=""><p>Learn Here</p></a></li>
+           <li><a href=""><p>About</p></a></li>
+       </ul>
+   </nav>
+    <header>
+        <h1>SQL Study Material</h1>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Key Points</h2>
+            <nav>
+                <ul>
+                    <li><a href="#sql-basics">SQL Basics: Syntax, Queries</a></li>
+                    <li><a href="#ddl">DDL: Create, Alter, Drop</a></li>
+                    <li><a href="#dml">DML: Insert, Update, Delete</a></li>
+                    <li><a href="#constraints">Constraints: PK, FK, Unique</a></li>
+                    <li><a href="#joins">Joins: Inner, Outer, Self</a></li>
+                    <li><a href="#subqueries">Subqueries: Nested Queries</a></li>
+                    <li><a href="#indexes">Indexes: Performance Tuning</a></li>
+                    <li><a href="#transactions">Transactions: ACID Properties</a></li>
+                    <li><a href="#views">Views: Virtual Tables</a></li>
+                    <li><a href="#stored-procedures">Stored Procedures: Reusable Code</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <article id="sql-basics">
+                <h2>1. SQL Basics</h2>
+                <p>SQL (Structured Query Language) is a standard language for managing and manipulating relational databases.</p>
+                <pre>
+SELECT * FROM employees;
+                </pre>
+                <p><b>Detailed Explanation:</b></p>
+                <ul>
+                    <li><b>SELECT:</b> Retrieves data from a table.</li>
+                    <li><b>FROM:</b> Specifies the table to query.</li>
+                    <li><b>WHERE:</b> Filters rows based on conditions.</li>
+                    <li><b>ORDER BY:</b> Sorts the result set.</li>
+                </ul>
+                <section class="note">SQL is case-insensitive, but keywords are conventionally written in uppercase.</section>
+            </article>
+
+            <article id="ddl">
+                <h2>2. DDL (Data Definition Language)</h2>
+                <p>DDL commands are used to define and modify database structures like tables and schemas.</p>
+                <pre>
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    salary DECIMAL(10, 2)
+);
+
+ALTER TABLE employees ADD COLUMN department VARCHAR(50);
+
+DROP TABLE employees;
+                </pre>
+                <p><b>Commands:</b></p>
+                <ul>
+                    <li><b>CREATE:</b> Creates new tables, databases, or indexes.</li>
+                    <li><b>ALTER:</b> Modifies existing structures (e.g., adding columns).</li>
+                    <li><b>DROP:</b> Deletes structures from the database.</li>
+                </ul>
+            </article>
+
+            <article id="dml">
+                <h2>3. DML (Data Manipulation Language)</h2>
+                <p>DML commands manipulate the data stored within tables.</p>
+                <pre>
+INSERT INTO employees (id, name, salary) VALUES (1, 'Alice', 50000);
+
+UPDATE employees SET salary = 55000 WHERE id = 1;
+
+DELETE FROM employees WHERE id = 1;
+                </pre>
+                <p><b>Commands:</b></p>
+                <ul>
+                    <li><b>INSERT:</b> Adds new records to a table.</li>
+                    <li><b>UPDATE:</b> Modifies existing records.</li>
+                    <li><b>DELETE:</b> Removes records from a table.</li>
+                </ul>
+            </article>
+
+            <article id="constraints">
+                <h2>4. Constraints</h2>
+                <p>Constraints enforce rules on the data in tables to maintain integrity.</p>
+                <pre>
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
+
+ALTER TABLE employees ADD CONSTRAINT unique_name UNIQUE (name);
+                </pre>
+                <p><b>Types:</b></p>
+                <ul>
+                    <li><b>PRIMARY KEY:</b> Uniquely identifies each record.</li>
+                    <li><b>FOREIGN KEY:</b> Links two tables together.</li>
+                    <li><b>UNIQUE:</b> Ensures all values in a column are unique.</li>
+                    <li><b>NOT NULL:</b> Prevents null values in a column.</li>
+                </ul>
+            </article>
+
+            <article id="joins">
+                <h2>5. Joins</h2>
+                <p>Joins combine data from multiple tables based on related columns.</p>
+                <pre>
+SELECT e.name, d.department_name
+FROM employees e
+INNER JOIN departments d ON e.department_id = d.id;
+
+SELECT e.name, d.department_name
+FROM employees e
+LEFT JOIN departments d ON e.department_id = d.id;
+                </pre>
+                <p><b>Types:</b></p>
+                <ul>
+                    <li><b>INNER JOIN:</b> Returns rows with matching values in both tables.</li>
+                    <li><b>LEFT/RIGHT JOIN:</b> Includes all rows from one table, with matches from the other.</li>
+                    <li><b>FULL JOIN:</b> Includes all rows from both tables, with NULLs where no match exists.</li>
+                    <li><b>SELF JOIN:</b> Joins a table to itself.</li>
+                </ul>
+            </article>
+
+            <article id="subqueries">
+                <h2>6. Subqueries</h2>
+                <p>Subqueries are queries nested within another query to perform complex operations.</p>
+                <pre>
+SELECT name FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+SELECT * FROM orders
+WHERE customer_id IN (SELECT id FROM customers WHERE country = 'USA');
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>Scalar Subquery:</b> Returns a single value.</li>
+                    <li><b>Row Subquery:</b> Returns a single row.</li>
+                    <li><b>Table Subquery:</b> Returns multiple rows.</li>
+                </ul>
+            </article>
+
+            <article id="indexes">
+                <h2>7. Indexes</h2>
+                <p>Indexes improve the speed of data retrieval operations on a table.</p>
+                <pre>
+CREATE INDEX idx_name ON employees (name);
+
+DROP INDEX idx_name;
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>CREATE INDEX:</b> Creates an index on a column.</li>
+                    <li><b>DROP INDEX:</b> Removes an index.</li>
+                    <li><b>Clustered/Non-clustered:</b> Types of indexes affecting data storage.</li>
+                </ul>
+                <section class="note">Indexes speed up SELECT queries but may slow down INSERT, UPDATE, and DELETE operations.</section>
+            </article>
+
+            <article id="transactions">
+                <h2>8. Transactions</h2>
+                <p>Transactions ensure data integrity by grouping operations with ACID properties.</p>
+                <pre>
+BEGIN TRANSACTION;
+
+UPDATE accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE id = 2;
+
+COMMIT;
+                </pre>
+                <p><b>Properties:</b></p>
+                <ul>
+                    <li><b>Atomicity:</b> Ensures all operations complete or none do.</li>
+                    <li><b>Consistency:</b> Maintains a valid database state.</li>
+                    <li><b>Isolation:</b> Ensures transactions are independent.</li>
+                    <li><b>Durability:</b> Guarantees changes persist after commit.</li>
+                </ul>
+            </article>
+
+            <article id="views">
+                <h2>9. Views</h2>
+                <p>Views are virtual tables created from the result of a query.</p>
+                <pre>
+CREATE VIEW high_salary_employees AS
+SELECT * FROM employees WHERE salary > 60000;
+
+SELECT * FROM high_salary_employees;
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>CREATE VIEW:</b> Defines a new view.</li>
+                    <li><b>DROP VIEW:</b> Removes a view.</li>
+                    <li><b>Materialized Views:</b> Physically store query results (database-specific).</li>
+                </ul>
+            </article>
+
+            <article id="stored-procedures">
+                <h2>10. Stored Procedures</h2>
+                <p>Stored procedures are reusable SQL scripts stored in the database.</p>
+                <pre>
+CREATE PROCEDURE increase_salary(IN emp_id INT, IN amount DECIMAL)
+BEGIN
+    UPDATE employees SET salary = salary + amount WHERE id = emp_id;
+END;
+
+CALL increase_salary(1, 5000);
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>CREATE PROCEDURE:</b> Defines a new procedure.</li>
+                    <li><b>CALL:</b> Executes a stored procedure.</li>
+                    <li><b>Parameters:</b> Supports IN, OUT, and INOUT types.</li>
+                </ul>
+            </article>
+        </main>
+    </div>
+
+    <script src="./scripts/learn.js"></script>
+
+</body>
+</html>

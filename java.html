@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Java Study Material with Interactive Sidebar</title>
+    
+</head><link rel="stylesheet" href="./styles/content.css">
+<body>
+    <nav class="nav">
+        <a href="" class="logo"> 
+           <img class="logo" src="./image/Buddy 4 Fresher.png" alt="" ></a>
+       <ul type="none" style="display: flex; justify-content: space-around; flex-direction:row; align-items: center; gap: 100px;  ">
+         
+           <li><a href="./index.html"><p>Home</p></a></li>
+           <li><a href=""><p> Programs</p></a></li>
+           <li>  <a href=""> <p>Road Map</p></a></li>
+           <li> <a href=""><p>Learn Here</p></a></li>
+           <li><a href=""><p>About</p></a></li>
+       </ul>
+   </nav>
+    <header>
+        <h1>Core Java Study Material</h1>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Key Points</h2>
+            <nav>
+                <ul>
+                    <li><a href="#java-basics">Java Basics: Syntax, JVM</a></li>
+                    <li><a href="#variables">Variables: Types, Scope</a></li>
+                    <li><a href="#control-flow">Control Flow: If, Loops</a></li>
+                    <li><a href="#oop">OOP: Classes, Objects</a></li>
+                    <li><a href="#inheritance">Inheritance: Extends, Super</a></li>
+                    <li><a href="#polymorphism">Polymorphism: Overriding</a></li>
+                    <li><a href="#encapsulation">Encapsulation: Access Modifiers</a></li>
+                    <li><a href="#exceptions">Exceptions: Try, Catch</a></li>
+                    <li><a href="#collections">Collections: List, Set, Map</a></li>
+                    <li><a href="#threads">Threads: Multithreading</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <article id="java-basics">
+                <h2>1. Java Basics</h2>
+                <p>Java is a high-level, object-oriented programming language that runs on the JVM (Java Virtual Machine).</p>
+                <pre>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+                </pre>
+                <p><b>Detailed Explanation:</b></p>
+                <ul>
+                    <li><b>JVM:</b> Executes bytecode, making Java platform-independent.</li>
+                    <li><b>Syntax:</b> C-like with strict typing.</li>
+                    <li><b>Main Method:</b> Entry point of a program.</li>
+                    <li><b>Compilation:</b> .java → .class via javac.</li>
+                </ul>
+                <section class="note">Java is "write once, run anywhere" due to JVM.</section>
+            </article>
+
+            <article id="variables">
+                <h2>2. Variables</h2>
+                <p>Variables store data with specific types and scopes.</p>
+                <pre>
+int age = 25;           // Primitive
+double salary = 5000.5; // Primitive
+String name = "John";   // Reference type
+final int MAX = 100;    // Constant
+
+public class Example {
+    static int globalVar = 10; // Class scope
+    void method() {
+        int localVar = 5;     // Method scope
+    }
+}
+                </pre>
+                <p><b>Types:</b></p>
+                <ul>
+                    <li><b>Primitive:</b> int, double, char, boolean</li>
+                    <li><b>Reference:</b> String, arrays, objects</li>
+                    <li><b>Scope:</b> Local, instance, static</li>
+                    <li><b>final:</b> Immutable values</li>
+                </ul>
+            </article>
+
+            <article id="control-flow">
+                <h2>3. Control Flow</h2>
+                <p>Controls program execution with conditions and loops.</p>
+                <pre>
+int x = 10;
+if (x > 0) {
+    System.out.println("Positive");
+} else if (x == 0) {
+    System.out.println("Zero");
+} else {
+    System.out.println("Negative");
+}
+
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+                </pre>
+                <p><b>Structures:</b></p>
+                <ul>
+                    <li><b>if-else:</b> Conditional branching</li>
+                    <li><b>for:</b> Fixed iteration</li>
+                    <li><b>while/do-while:</b> Condition-based loops</li>
+                    <li><b>switch:</b> Multi-case selection</li>
+                </ul>
+            </article>
+
+            <article id="oop">
+                <h2>4. Object-Oriented Programming (OOP)</h2>
+                <p>Java is built around classes and objects.</p>
+                <pre>
+public class Person {
+    String name;
+    int age;
+    
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    void display() {
+        System.out.println(name + ", " + age);
+    }
+}
+
+Person p = new Person("Alice", 30);
+p.display();
+                </pre>
+                <p><b>Concepts:</b></p>
+                <ul>
+                    <li><b>Class:</b> Blueprint</li>
+                    <li><b>Object:</b> Instance of class</li>
+                    <li><b>Constructor:</b> Initializes objects</li>
+                    <li><b>this:</b> Refers to current instance</li>
+                </ul>
+                <section class="note">OOP promotes reusability and modularity.</section>
+            </article>
+
+            <article id="inheritance">
+                <h2>5. Inheritance</h2>
+                <p>Allows classes to inherit properties and methods.</p>
+                <pre>
+class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking...");
+    }
+}
+
+Dog d = new Dog();
+d.eat();  // Inherited
+d.bark(); // Own method
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>extends:</b> Inherits from parent</li>
+                    <li><b>super:</b> Access parent class</li>
+                    <li><b>Single Inheritance:</b> One parent only</li>
+                </ul>
+            </article>
+
+            <article id="polymorphism">
+                <h2>6. Polymorphism</h2>
+                <p>Methods can behave differently based on object type.</p>
+                <pre>
+class Animal {
+    void sound() {
+        System.out.println("Some sound");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Meow");
+    }
+}
+
+Animal a = new Cat(); // Upcasting
+a.sound(); // Outputs "Meow"
+                </pre>
+                <p><b>Types:</b></p>
+                <ul>
+                    <li><b>Overriding:</b> Redefine parent method</li>
+                    <li><b>Overloading:</b> Same name, different parameters</li>
+                    <li><b>Upcasting:</b> Treat subclass as parent</li>
+                </ul>
+            </article>
+
+            <article id="encapsulation">
+                <h2>7. Encapsulation</h2>
+                <p>Protects data using access modifiers and getters/setters.</p>
+                <pre>
+public class Student {
+    private String name; // Encapsulated
+    private int age;
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+Student s = new Student();
+s.setName("Bob");
+                </pre>
+                <p><b>Modifiers:</b></p>
+                <ul>
+                    <li><b>private:</b> Class-only access</li>
+                    <li><b>protected:</b> Package + subclasses</li>
+                    <li><b>public:</b> Everywhere</li>
+                    <li><b>default:</b> Package-only if unspecified</li>
+                </ul>
+            </article>
+
+            <article id="exceptions">
+                <h2>8. Exceptions</h2>
+                <p>Handles runtime errors gracefully.</p>
+                <pre>
+try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Error: " + e.getMessage());
+} finally {
+    System.out.println("Done");
+}
+                </pre>
+                <p><b>Features:</b></p>
+                <ul>
+                    <li><b>try-catch:</b> Handle exceptions</li>
+                    <li><b>finally:</b> Always executes</li>
+                    <li><b>throws:</b> Declare exceptions</li>
+                    <li><b>throw:</b> Manually throw exceptions</li>
+                </ul>
+            </article>
+
+            <article id="collections">
+                <h2>9. Collections</h2>
+                <p>Framework for storing and manipulating groups of objects.</p>
+                <pre>
+import java.util.*;
+
+List<String> list = new ArrayList<>();
+list.add("Apple");
+
+Set<Integer> set = new HashSet<>();
+set.add(1);
+
+Map<String, Integer> map = new HashMap<>();
+map.put("One", 1);
+                </pre>
+                <p><b>Key Interfaces:</b></p>
+                <ul>
+                    <li><b>List:</b> Ordered, allows duplicates</li>
+                    <li><b>Set:</b> No duplicates</li>
+                    <li><b>Map:</b> Key-value pairs</li>
+                </ul>
+                <section class="note">Use generics for type safety.</section>
+            </article>
+
+            <article id="threads">
+                <h2>10. Threads</h2>
+                <p>Enables concurrent execution.</p>
+                <pre>
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread running");
+    }
+}
+
+MyThread t = new MyThread();
+t.start();
+
+Runnable r = () -> System.out.println("Runnable");
+Thread t2 = new Thread(r);
+t2.start();
+                </pre>
+                <p><b>Approaches:</b></p>
+                <ul>
+                    <li><b>Extend Thread:</b> Inherit and override run()</li>
+                    <li><b>Implement Runnable:</b> More flexible</li>
+                    <li><b>synchronized:</b> Thread safety</li>
+                </ul>
+            </article>
+        </main>
+    </div>
+
+   <script src="./scripts/learn.js"></script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Study Material with Interactive Sidebar</title>
+   <link rel="stylesheet" href="./styles/content.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="" class="logo"> 
+           <img class="logo" src="./image/Buddy 4 Fresher.png" alt="" ></a>
+       <ul type="none" style="display: flex; justify-content: space-around; flex-direction:row; align-items: center; gap: 100px;  ">
+         
+           <li><a href="./index.html"><p>Home</p></a></li>
+           <li><a href=""><p> Programs</p></a></li>
+           <li>  <a href=""> <p>Road Map</p></a></li>
+           <li> <a href=""><p>Learn Here</p></a></li>
+           <li><a href=""><p>About</p></a></li>
+       </ul>
+   </nav>
+    <header class="header">
+        <h1>CSS </h1>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Key Points</h2>
+            <nav>
+                <ul>
+                    <li><a href="#css-intro">CSS Introduction</a></li>
+                    <li><a href="#add-css">3 Ways to Add CSS in HTML</a></li>
+                    <li><a href="#css-selectors">CSS Selectors</a></li>
+                    <li><a href="#box-model">Box Modelling</a></li>
+                    <li><a href="#text-formatting">Text Formatting Properties</a></li>
+                    <li><a href="#font-properties">Font Properties</a></li>
+                    <li><a href="#css-colors">CSS Colors</a></li>
+                    <li><a href="#background-properties">CSS Background Properties</a></li>
+                    <li><a href="#borders-box-effects">Borders and Box Effects Properties</a></li>
+                    <li><a href="#positions">Positions in CSS</a></li>
+                    <li><a href="#display-properties">Display Properties</a></li>
+                    <li><a href="#flex-property">Flex Property</a></li>
+                    <li><a href="#grid-property">Grid Property</a></li>
+                    <li><a href="#z-index">Z Index</a></li>
+                    <li><a href="#float-property">Float Property in CSS</a></li>
+                    <li><a href="#transform-property">Transform Property</a></li>
+                    <li><a href="#transitions">Transitions Properties</a></li>
+                    <li><a href="#animation">Animation in CSS</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+        <!-- CSS Introduction -->
+    <article>
+        <h2 id="css-intro">1. CSS Introduction</h2>
+        <p>CSS stands for Cascading Style Sheet.</p>
+        <p>Gives Styling to the Web Pages.</p>
+        <p>Cascading means - pouring (adding)</p>
+        <p>Pouring CSS styling on to HTML document</p>
+        <p>Style sheet - Document</p>
+        <h3>History of CSS</h3>
+        <p>CSS introduced by Håkon Wium Lie in 1994</p>
+        <p>First version CSS 1 - 1996</p>
+        <p>Second version CSS 2 - 1998</p>
+        <p>Third version CSS 3 - 2007</p>
+        <p>Currently we are using CSS 3</p>
+        <p>New features in CSS 3 are below:</p>
+        <p>Media queries, text effects, gradients, CSS grid, flex, opacity, selectors, animations, borders, layout, transforms, shadows</p>
+        <h3>CSS Syntax:</h3>
+        <pre>
+            Tag name or selectors {
+                css properties: value;
+            }
+        </pre>
+    </article>
+
+    <!-- 3 Ways to Add CSS in HTML -->
+    <article>
+        <h2 id="add-css">2. Three Ways to Add CSS in HTML</h2>
+        <ol>
+            <li>Inline CSS</li>
+            <li>Internal CSS</li>
+            <li>External CSS</li>
+        </ol>
+        <h3>Inline CSS</h3>
+        <p>The code is written in the opening tag of the HTML element by using style attribute.</p>
+        <p>Syntax:</p>
+        <pre>&lt;p style="property : value"&gt; content &lt;/p&gt;</pre>
+        <h3>Internal CSS</h3>
+        <p>The code is written inside or after head tag section of an HTML element by using <code>&lt;style&gt;</code> tag.</p>
+        <p>Syntax:</p>
+        <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        tag_name or selector {
+            property: value;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+        </pre>
+        <h3>External CSS</h3>
+        <p>External CSS styling can be done by creating an external CSS file with file_name.css extension and providing the link between that CSS file to HTML file by <code>&lt;link&gt;</code> tag in the head section of HTML element.</p>
+        <p>Syntax:</p>
+        <pre>
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="file_name.css"&gt;
+&lt;/head&gt;
+        </pre>
+        <p><strong>NOTE:</strong></p>
+        <p><code>rel</code>: specifies the relation. <code>rel="stylesheet"</code> No value other than "stylesheet" should be declared</p>
+    </article>
+
+    <!-- CSS Selectors -->
+    <article>
+        <h2 id="css-selectors">3. CSS Selectors</h2>
+        <p>Selectors are used to select or target the particular HTML element to style them. Or it is term or word which we will mention to style multiple elements at the same time</p>
+        <p>There are five types of Selectors:</p>
+        <ol>
+            <li>Simple Selectors.</li>
+            <li>Combinator Selectors.</li>
+            <li>Attribute Selectors.</li>
+            <li>Pseudo Class Selectors.</li>
+            <li>Pseudo Element Selectors.</li>
+        </ol>
+        <h3>Simple Selector</h3>
+        <p>Simple selectors style the HTML element in five ways:</p>
+        <ol>
+            <li><strong>Id Selector (#)</strong></li>
+            <li><strong>Class Selector (. (dot))</strong></li>
+            <li><strong>Tag name selector (tagname itself)</strong></li>
+            <li><strong>Grouping selector (, (comma))</strong></li>
+            <li><strong>Universal selector (*)</strong></li>
+        </ol>
+        <h4>ID Selector</h4>
+        <p>Id selector targets only individual element in the HTML document.</p>
+        <p>Prefix symbol used for id selector is # (hash) id should be unique</p>
+        <p>HTML file:</p>
+        <pre>&lt;p id="demo"&gt;HELLO&lt;/p&gt;</pre>
+        <p>CSS file:</p>
+        <pre>
+#demo {
+    color: red;
+    background: yellow;
+}
+        </pre>
+        <h4>Class Selector</h4>
+        <p>Class selectors targets multiple elements in the HTML document.</p>
+        <p>Prefix symbol used for id selector is . (dot) class can be multiples</p>
+        <p>Syntax:</p>
+        <p>HTML:</p>
+        <pre>
+&lt;h1 class="test"&gt;HELLO&lt;/h1&gt;
+&lt;h2 class="test"&gt;GOOD&lt;/h2&gt;
+&lt;h3 class="test"&gt;MORNING&lt;/h3&gt;
+        </pre>
+        <p>CSS:</p>
+        <pre>
+.test {
+    color: magenta;
+    background: green;
+}
+        </pre>
+        <h4>Tagname Selector</h4>
+        <p>Tagname selector targets the HTML elements by tag name.</p>
+        <p>There is no symbol used in tagname selectors. We have to use tag as name itself</p>
+        <p>Syntax:</p>
+        <pre>
+&lt;h1&gt;HEADING 1&lt;/h1&gt;
+&lt;h2&gt;HEADING 2&lt;/h2&gt;
+&lt;h3&gt;HEADING 3&lt;/h3&gt;
+        </pre>
+        <pre>
+h1 {
+    color: magenta;
+    background: green;
+}
+h2 {
+    color: red;
+    background: black;
+}
+h3 {
+    color: yellow;
+    background: orange;
+}
+        </pre>
+        <h4>Grouping Selector</h4>
+        <p>Grouping selector targets a group of HTML elements by tagname separated by commas (,)</p>
+        <p>Syntax:</p>
+        <pre>
+&lt;p&gt;Paragraph&lt;/p&gt;
+&lt;div&gt;Division&lt;/div&gt;
+&lt;h4&gt;HEADING 4&lt;/h4&gt;
+        </pre>
+        <pre>
+p, div, h4 {
+    color: magenta;
+    background: green;
+}
+        </pre>
+        <h4>Universal Selectors</h4>
+        <p>Universal Selectors targets every HTML element. The symbol of Universal Selector is *</p>
+        <p>Syntax:</p>
+        <pre>
+&lt;p&gt;Paragraph&lt;/p&gt;
+&lt;div&gt;Division&lt;/div&gt;
+&lt;h4&gt;HEADING 4&lt;/h4&gt;
+        </pre>
+        <pre>
+* {
+    color: yellow;
+    background: magenta;
+}
+        </pre>
+        <h3>Combinator Selector</h3>
+        <p>Combinator Selectors are used to style the combination of HTML elements.</p>
+        <ol>
+            <li><strong>Descendent Selector:</strong> This Selector targets both direct and indirect children of a parent tag. The symbol is (space)</li>
+            <pre>Syntax: parent_tag child_tag { property: value; }</pre>
+            <li><strong>Child Selector:</strong> This Selector targets only the direct children of the parent. The symbol is &gt; (greater than)</li>
+            <pre>Syntax: parent_tag &gt; child_tag { property: value; }</pre>
+            <li><strong>Adjacent Selector:</strong> This Selector targets the element which is the first sibling of the targeted HTML tag or element. (or) This Selector targets the element which is exactly adjacent to the targeted HTML tag or element. The symbol is + (plus)</li>
+            <pre>Syntax: first_sib_tag + second_sib_tag { property: value; }</pre>
+            <li><strong>General Sibling Selector:</strong> This Selector targets all the siblings of the target HTML tag or element. (or) This Selector targets all the adjacent tags of the target HTML tag or element. The symbol is ~ (tilde)</li>
+            <pre>Syntax: first_sib_tag ~ second_sib_tag { property: value; }</pre>
+        </ol>
+        <h3>Attribute Selectors</h3>
+        <p>Attribute selectors are used to style the HTML element by targeting the respective attributes and with their values.</p>
+        <p>Types of Attribute Selector:</p>
+        <ol>
+            <li><code>tag_name[attribute_name]</code>: Represents elements with an attribute name of attribute_name.</li>
+            <li><code>tag_name[attribute_name="value"]</code>: Represents element with an attribute name of attribute_name whose value is exactly value.</li>
+        </ol>
+        <h3>Pseudo Elements Selectors</h3>
+        <p>For pseudo elements selectors will target by (::) this symbol</p>
+        <ol>
+            <li><strong>First Letter:</strong> It will target the first letter of respective content of targeted HTML element</li>
+            <li><strong>First Line:</strong> It will target the first line of respective content of targeted HTML element</li>
+            <li><strong>Before:</strong> It will add the any type of content or CSS property just before the targeted HTML element</li>
+            <li><strong>After:</strong> It will add the any type of content or CSS property right after the targeted HTML element</li>
+            <li><strong>Selection:</strong> Whenever we will select any kind of content will get color as blue as default but by using selection selector we can change that color and background color to</li>
+            <li><strong>Marker:</strong> This selector will change the color of list marker and only it will applicable for li tag</li>
+        </ol>
+        <h3>Pseudo Class Selectors</h3>
+        <p>The symbol for pseudo selector is (:)</p>
+        <ol>
+            <li><strong>Dynamic Pseudo Class</strong></li>
+            <li><strong>Structural Pseudo Class</strong></li>
+        </ol>
+        <h4>Dynamic Pseudo Class</h4>
+        <ul>
+            <li><strong>hover</strong></li>
+            <pre>
+p:hover {
+    background-color: aqua;
+}
+&lt;p&gt;rohit&lt;/p&gt;
+            </pre>
+            <li><strong>visited</strong></li>
+            <pre>
+a:visited {
+    color: aqua;
+}
+&lt;a href=""&gt;rohit&lt;/a&gt;
+            </pre>
+            <li><strong>active</strong></li>
+            <pre>
+a:active {
+    background-color: aqua;
+}
+&lt;a href=""&gt;click here&lt;/a&gt;
+            </pre>
+            <li><strong>focus</strong></li>
+            <pre>
+input:focus {
+    background-color: aqua;
+}
+&lt;input type="text"&gt;
+            </pre>
+        </ul>
+        <h4>Structural Pseudo Class</h4>
+        <ul>
+            <li><strong>First-child</strong></li>
+            <pre>
+div p:first-child {
+    background-color: aqua;
+}
+&lt;div&gt;
+    &lt;p&gt;child 1&lt;/p&gt;
+    &lt;p&gt;child 2&lt;/p&gt;
+    &lt;p&gt;child 3&lt;/p&gt;
+    &lt;p&gt;child 4&lt;/p&gt;
+    &lt;p&gt;child 5&lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+            <p>Output ----&gt; child1</p>
+            <li><strong>Last-child</strong></li>
+            <pre>
+div p:last-child {
+    background-color: aqua;
+}
+&lt;div&gt;
+    &lt;p&gt;child 1&lt;/p&gt;
+    &lt;p&gt;child 2&lt;/p&gt;
+    &lt;p&gt;child 3&lt;/p&gt;
+    &lt;p&gt;child 4&lt;/p&gt;
+    &lt;p&gt;child 5&lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+            <p>Output ----&gt; child5</p>
+            <li><strong>Nth-child</strong></li>
+            <pre>
+div p:nth-child(4) {
+    background-color: aqua;
+}
+&lt;div&gt;
+    &lt;p&gt;child 1&lt;/p&gt;
+    &lt;p&gt;child 2&lt;/p&gt;
+    &lt;p&gt;child 3&lt;/p&gt;
+    &lt;p&gt;child 4&lt;/p&gt;
+    &lt;p&gt;child 5&lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+            <p>Output ----&gt; child4</p>
+            <p>And for even child's (2n) and for odd child's (2n-1)</p>
+            <li><strong>First-of-type</strong></li>
+            <pre>
+div b:first-of-type {
+    background-color: aqua;
+}
+&lt;div&gt;
+    &lt;p&gt;child 1&lt;/p&gt;
+    &lt;b&gt;bold1&lt;/b&gt;
+    &lt;p&gt;child 2&lt;/p&gt;
+    &lt;b&gt;bold2&lt;/b&gt;
+    &lt;p&gt;child 3&lt;/p&gt;
+    &lt;b&gt;bold3&lt;/b&gt;
+&lt;/div&gt;
+            </pre>
+            <p>Output ----&gt; bold1</p>
+            <li><strong>Last-of-type</strong></li>
+            <pre>
+div p:last-of-type {
+    background-color: aqua;
+}
+&lt;div&gt;
+    &lt;p&gt;child 1&lt;/p&gt;
+    &lt;b&gt;bold1&lt;/b&gt;
+    &lt;p&gt;child 2&lt;/p&gt;
+    &lt;b&gt;bold2&lt;/b&gt;
+    &lt;p&gt;child 3&lt;/p&gt;
+    &lt;b&gt;bold3&lt;/b&gt;
+&lt;/div&gt;
+            </pre>
+            <p>Output ----&gt; child3</p>
+        </ul>
+    </article>
+
+    <!-- Box Modelling -->
+    <article>
+        <h2 id="box-model">4. Box Modelling</h2>
+        <p>Box Model is essentially a box that wraps around every HTML element</p>
+        <p>Box Model is used to design and layout.</p>
+        <p>The CSS Box Model consists of Margin, Border, Padding and the actual Content.</p>
+        <ul>
+            <li><strong>Content:</strong> It is the content of the HTML element.</li>
+            <li><strong>Padding:</strong> It is the space after the content.</li>
+            <li><strong>Border:</strong> It is the Border of the HTML element.</li>
+            <li><strong>Margin:</strong> It is the space after the Border of an HTML element.</li>
+        </ul>
+        <p>Padding and Margin allow up to four values.</p>
+        <p>Syntax:</p>
+        <pre>
+|  | T | R | B | L |
+|------|-----|-----|-----|
+| padding: 10px | 0 | 0 | 0 |
+| padding: 10px 20px | 0 | 0 |
+| padding: 10px 20px 30px | 0 |
+| padding: 10px 20px 30px 40px |
+        </pre>
+    </article>
+
+    <!-- Text Formatting Properties -->
+    <article>
+        <h2 id="text-formatting">5. Text Formatting Properties</h2>
+        <ul>
+            <li><strong>color</strong> - font color</li>
+            <li><strong>text-align</strong> - center, right, left, justify</li>
+            <li><strong>text-transform</strong> - capitalize, uppercase, lowercase</li>
+            <li><strong>text-shadow</strong> - px px px color ;</li>
+            <li><strong>text-decoration</strong> - underline, overline, overthrogh, none</li>
+            <li><strong>letter-spacing</strong> - in pixels</li>
+            <li><strong>word-spacing</strong> - in pixels</li>
+            <li><strong>line-height</strong> - in pixels</li>
+        </ul>
+    </article>
+
+    <!-- Font Properties -->
+    <article>
+        <h2 id="font-properties">6. Font Properties</h2>
+        <ul>
+            <li><strong>font-size:</strong> in pixels, small, smaller, medium, large, larger, xxlarger</li>
+            <li><strong>font-style:</strong> italic, oblique, normal</li>
+            <li><strong>font-family:</strong> like Times New Roman</li>
+            <li><strong>font-weight:</strong> 100-900 (boldness)</li>
+        </ul>
+    </article>
+
+    <!-- CSS Colors -->
+    <article>
+        <h2 id="css-colors">7. CSS Colors</h2>
+        <p><strong>Hexa:</strong></p>
+        <ul>
+            <li>#000000 → Black → (0-9)</li>
+            <li>#ffffff → White → (a-f)</li>
+        </ul>
+        <p><strong>RGB:</strong> (red green blue)</p>
+        <ul>
+            <li>rgb(255,0,0) → red</li>
+            <li>rgb(0,255,0) → green</li>
+            <li>rgb(0,0,255) → blue</li>
+        </ul>
+        <p><strong>RGBA:</strong> (red green blue alpha)</p>
+        <p>alpha(opacity): 0.0 → transparent</p>
+        <p>1.0 → Totally visible</p>
+        <p><strong>HSL:</strong> (hue, saturation, lightening)</p>
+        <p>Hue → deg</p>
+        <p>Saturation → %</p>
+        <p>Lightening → %</p>
+        <p><strong>HSLA:</strong> (hue, saturation, lightening, alpha)</p>
+    </article>
+
+    <!-- CSS Background Properties -->
+    <article>
+        <h2 id="background-properties">8. CSS Background Properties</h2>
+        <p><strong>background color:</strong></p>
+        <p>To add background color in HTML, use the CSS background-color property. Set it to the color name or code you want and place it</p>
+        <p><strong>Background:</strong></p>
+        <p>The only background property we will use for adding mix-up of two or more colors in 3 ways:</p>
+        <ul>
+            <li><strong>Linear-gradient:</strong> It adds two or more colors by horizontally</li>
+            <li><strong>Radial-gradient:</strong> It add two or more colors from middle point to around all rounded surface</li>
+            <li><strong>Conic-gradient:</strong> It will add two or more colors from center pointer of HTML element in shape or triangle like ex. CD DVD shape</li>
+        </ul>
+        <p><strong>background image:</strong></p>
+        <p>The most basic way to set a full-page background is to use the CSS background-image property. This property accepts a value that is the URL of the image you want to use as the background.</p>
+        <p><strong>Background size:</strong></p>
+        <p>We can set the background image size with the help of this property. The background-size property is specified in one of the following ways:</p>
+        <ul>
+            <li>Using the keyword values contain or cover.</li>
+            <li>Using a width value only, in which case the height defaults to auto.</li>
+            <li>Using both a width and a height value, in which case the first sets the width and the second sets the height.</li>
+        </ul>
+        <p><strong>background position:</strong></p>
+        <p>The background-position property sets the starting position of a background image. Tip: By default, a background-image is placed at the top-left corner of an element</p>
+        <p><strong>background attachment:</strong></p>
+        <p>The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed. Values are scroll and fixed</p>
+        <p><strong>background repeat:</strong></p>
+        <p>The background-repeat property sets if/how a background image will be repeated. By default, a background-image is repeated both vertically and horizontally. Tip: The background image is placed according to the background-position property.</p>
+        <p>Values: repeat, no-repeat, repeatX, repeatY</p>
+        <p><strong>Filter Properties:</strong></p>
+        <p>The filter property defines visual effects (like blur and saturation) to an element (often <code>&lt;img&gt;</code>).</p>
+        <pre>
+filter: hue-rotate(50deg);
+filter: brightness(70%);
+filter: drop-shadow(10px 10px 10px red);
+filter: grayscale(100%);
+filter: saturate(30%);
+filter: opacity(100%);
+filter: sepia(30%);
+filter: blur(10px);
+        </pre>
+    </article>
+
+    <!-- Borders and Box Effects Properties -->
+    <article>
+        <h2 id="borders-box-effects">9. Borders and Box Effects Properties</h2>
+        <h3>Border Properties</h3>
+        <p><strong>Border:</strong> Border property will provide different types of borders to HTML element</p>
+        <p><code>Border: 2px solid black;</code> (shorthand property)</p>
+        <ul>
+            <li>2px - thickness of border</li>
+            <li>Solid - style type of border. Solid is default (style of border is mandatory. Some more styles of border are - dashed, dotted, double, groove, ridge and outset)</li>
+            <li>Black - color of border</li>
+        </ul>
+        <p>We can provide each and individual properties like:</p>
+        <ul>
+            <li>Border-top-width</li>
+            <li>Border-right-width</li>
+            <li>Border-bottom-width</li>
+            <li>Border-left-width</li>
+            <li>Border-top-style</li>
+            <li>Border-right-style</li>
+            <li>Border-bottom-style</li>
+            <li>Border-left-style</li>
+            <li>Border-top-color</li>
+            <li>Border-right-color</li>
+            <li>Border-bottom-color</li>
+            <li>Border-left-color</li>
+        </ul>
+        <h3>Box Shadow</h3>
+        <p>The box-shadow CSS property adds shadow effects around an element's frame.</p>
+        <p><code>box-shadow: 5px 5px 5px 5px color;</code></p>
+        <ul>
+            <li>5px 5px - Specify a Horizontal and a Vertical Shadow. In its simplest use, you only specify a horizontal and a vertical shadow</li>
+            <li>5px - Add a Blur Effect to the Shadow</li>
+            <li>5px - Set the Spread Radius opacity of the Shadow</li>
+            <li>Color - Specify a Color for the Shadow. The color parameter defines the color of the shadow.</li>
+        </ul>
+        <h3>Overflow Property</h3>
+        <p>The overflow property specifies what should happen if content overflows an element's box.</p>
+        <p>This property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.</p>
+        <p>Values --- hidden, scroll</p>
+        <h3>Resize Property</h3>
+        <p>The resize property defines if (and how) an element is resizable by the user.</p>
+        <p><em>Note:</em> The resize property does not apply to inline elements where overflow="visible(scroll)". So, make sure that overflow is set to "scroll", "auto", or "hidden".</p>
+        <p>Values: horizontal, vertical, both</p>
+        <h3>Visibility Property</h3>
+        <p>This property makes the content visible or hidden according to its values. The values are given in visibility properties are visible and hidden</p>
+        <h3>Image Border</h3>
+        <p>The border-image property allows you to specify an image to be used as the border around an element. For applying image in border, border property is mandatory</p>
+        <p>Ex: <code>border-image: url(./img.jpg) 50;</code></p>
+        <h3>Outline Property</h3>
+        <p>An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out"</p>
+        <p>CSS has the following outline properties:</p>
+        <p><code>outline</code> is the shorthand properties for below properties:</p>
+        <ul>
+            <li>outline-style</li>
+            <li>outline-color</li>
+            <li>outline-width</li>
+            <li>outline-offset</li>
+        </ul>
+    </article>
+
+    <!-- Positions in CSS -->
+    <article>
+        <h2 id="positions">10. Positions in CSS</h2>
+        <p><strong>Relative:</strong> The position of the element is relative to the normal position, where the white space of the targeted element is not occupied by the other element</p>
+        <p><strong>Absolute:</strong> When the position is absolute the element can be placed anywhere on the webpages, where the white space of that element is occupied by the other element.</p>
+        <p><strong>Fixed:</strong> The position of the element depends on the viewport of the browser's Window and it will be fixed on the webpages</p>
+        <p><strong>Sticky:</strong> The targeted element is sticked to the position based on the scrolling of the web page.</p>
+        <p><strong>Static:</strong> Default position for HTML element</p>
+    </article>
+
+    <!-- Display Properties -->
+    <article>
+        <h2 id="display-properties">11. Display Properties</h2>
+        <p><strong>Inline:</strong> Displays an element as an inline element (like <code>&lt;span&gt;</code>). Any height and width properties will have no effect. This is default.</p>
+        <p><strong>Block:</strong> Displays an element as a block element (like <code>&lt;p&gt;</code>). It starts on a new line, and takes up the whole width</p>
+        <p><strong>Inline-block:</strong> Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values</p>
+    </article>
+
+    <!-- Flex Property -->
+    <article>
+        <h2 id="flex-property">12. Flex Property</h2>
+        <p>The most flexible display property in CSS is the apparently named as <code>display: flex</code>, which allows you to create flexible layouts with elements that you can align and distribute horizontally</p>
+        <p><code>display: flex;</code></p>
+        <p>In parent container this property have to provide to create layout in one line</p>
+        <p><strong>align-items:</strong></p>
+        <p>This property will make elements center of the webpage</p>
+        <p>Values: center, start and end</p>
+        <p><strong>justify-content:</strong> The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).</p>
+        <p>Justify content property values:</p>
+        <ul>
+            <li><strong>center:</strong> Items are positioned in the center of the container</li>
+            <li><strong>space-between:</strong> Items will have space between them</li>
+            <li><strong>space-around:</strong> Items will have space before, between, and after them</li>
+            <li><strong>space-evenly:</strong> Items will have equal space around</li>
+        </ul>
+        <p><strong>What is flex-wrap CSS?</strong></p>
+        <p>The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.</p>
+        <p>Values:</p>
+        <ul>
+            <li><strong>nowrap:</strong> Default value. Specifies that the flexible items will not wrap</li>
+            <li><strong>wrap:</strong> Specifies that the flexible items will wrap if necessary</li>
+            <li><strong>wrap-reverse:</strong> Specifies that the flexible items will wrap, if necessary, in reverse order</li>
+        </ul>
+        <p><strong>flex-direction:</strong></p>
+        <p>The flex-direction property in CSS is used to set the direction of the flex container's main axis.</p>
+        <p>It can have one of four values: row, row-reverse, column, or column-reverse. row is the default value and arranges flex items horizontally.</p>
+        <p><strong>flex-grow:</strong></p>
+        <p>The flex-grow CSS property defines how much an element grows relative to other flexible items inside the same parent element. It determines how much space to allocate to an item in a flex parent when the available space exceeds the combined size of all the</p>
+        <p>It can have values from 0-1, 2, 3...</p>
+        <p><strong>flex-basis:</strong></p>
+        <p>Flex-basis is a CSS property used in flexboxes that sets the initial size of a flex item before it grows or shrinks. Flex items exist in flex containers, which grow to fill empty space or shrink to prevent overflow on a web page.</p>
+        <p>It can values in pixels or rem</p>
+    </article>
+
+    <!-- Grid Property -->
+    <article>
+        <h2 id="grid-property">13. Grid Property</h2>
+        <p>The CSS grid layout module excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives. Like tables, grid layout enables an author to align elements into columns and rows.</p>
+        <p>Grid property is a shorthand and parent property for the following properties:</p>
+        <p><strong>What are grids (design)?</strong></p>
+        <p><strong>Properties:</strong></p>
+        <ul>
+            <li><strong>grid-template-columns:</strong> <code>auto auto auto auto auto</code> (or) <code>10px 20px 45px 85px</code></li>
+            <p>Will mention how many columns we want have in grid layout by specifying above values</p>
+            <li><strong>grid-template-rows:</strong> <code>auto auto auto auto</code> (or) <code>10px 20px 45px 85px</code></li>
+            <p>We can mention how many rows we want have in grid layout by specifying above values</p>
+            <li><strong>grid-template-rows:</strong> <code>repeat(4, pixel)</code></li>
+            <li><strong>grid-template-columns:</strong> <code>repeat(4, pixel)</code></li>
+            <p><code>repeat()</code> function: We can declare how many rows or columns we want by giving value instead of mentioning in auto and pixels for ex. 4 means 4 rows or columns get created</p>
+            <li><strong>FR unit in grid:</strong> Fractional unit. It takes the even space according to the parent width and height</li>
+            <li><strong>gap:</strong> In pixels. Also we have individual rowgap and colgap</li>
+            <li><strong>grid-column-start &amp; grid-column-end:</strong></li>
+            <p>We can merge the 2 or more columns by giving the properties</p>
+            <p>By starting value and at the end we have to give one extra value for merging</p>
+            <p>Ex. Like if you are merging 3 columns from start you have to mention</p>
+            <p><code>grid-column-start: 1 &amp; grid-column-end: 4</code> like (n+1 formula)</p>
+            <p><em>Note:</em> For rows also same formula will be added</p>
+        </ul>
+    </article>
+
+    <!-- Z Index -->
+    <article>
+        <h2 id="z-index">14. Z Index</h2>
+        <p>Z-index is the CSS property that controls the stacking order of overlapping elements on a page. An element with a higher z-index value will appear in front of an element with a lower z-index value. The property is called "z-index" because it sets the order of elements along the z-axis</p>
+        <p>Values: -1, 0, 1</p>
+    </article>
+
+    <!-- Float Property in CSS -->
+    <article>
+        <h2 id="float-property">15. Float Property in CSS</h2>
+        <p>The float property specifies whether an element should float to the left, right, or not at all. Values can be given as inline-start, inline-end or right and left</p>
+        <p>Float property will not work when you will provide for any element absolute position</p>
+    </article>
+
+    <!-- Transform Property -->
+    <article>
+        <h2 id="transform-property">16. Transform Property</h2>
+        <p>The CSS transform property allows you to rotate, scale, skew, and translate an element. It modifies the coordinate space of the CSS visual formatting model.</p>
+        <p>CSS transform property allows you to modify an element's shape, size, position, and orientation.</p>
+        <h3>Translate Property in CSS</h3>
+        <p>The translate property allows you to change the position of elements. The translate property defines x- and y-coordinates of an element in 2D</p>
+        <ul>
+            <li><strong>translate()</strong> - Defines a 2D translation</li>
+            <li><strong>translateX()</strong> - Defines a translation, using only the value for the X-axis</li>
+            <li><strong>translateY()</strong> - Defines a translation, using only the value for the Y-axis</li>
+        </ul>
+        <p>Values has to be given in pixels</p>
+        <h3>Scale Property</h3>
+        <p>The scale property in CSS resizes an element's width and height in proportion. So, if we have an element that's 100 pixels square, scaling it up by a value of 2 doubles the dimensions to 200 pixels square</p>
+        <ul>
+            <li><strong>scale()</strong> - Defines a 2D scale transformation</li>
+            <li><strong>scaleX()</strong> - Defines a scale by giving a value for the X-axis</li>
+            <li><strong>scaleY()</strong> - Defines a scale transformation by giving a value for the Y-axis</li>
+        </ul>
+        <p>Values has to be given in digits ex. 1, 1.2, 1.3, 1.4</p>
+        <h3>Rotate Property</h3>
+        <p>The rotate property allows you to rotate elements. The rotate property defines a value for how much an element is rotated clockwise direction</p>
+        <ul>
+            <li><strong>rotate(angle)</strong> - Defines a 2D rotation, the angle is specified in the parameter</li>
+            <li><strong>rotateX(angle)</strong> - Defines a 2D rotation along the X-axis</li>
+            <li><strong>rotateY(angle)</strong> - Defines a 2D rotation along the Y-axis</li>
+        </ul>
+        <p>Values has to be given in degrees for ex. (45deg)</p>
+        <h3>Skew Property</h3>
+        <p>The skew() property is which is used to transform an element in the 2D plane. Skew an element means to pick a point and push or pull it in different directions.</p>
+        <ul>
+            <li><strong>skew(angle)</strong> - Defines a 2D skew transformation</li>
+            <li><strong>skewX(angle)</strong> - Defines a 2D skew transformation along the X-axis</li>
+            <li><strong>skewY(angle)</strong> - Defines a 2D skew transformation along the Y-axis</li>
+        </ul>
+        <p>Value has to be given in degrees</p>
+    </article>
+
+    <!-- Transitions Properties -->
+    <article>
+        <h2 id="transitions">17. Transitions Properties</h2>
+        <p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+        <p><code>transition:</code> this property is shorthand properties for below properties</p>
+        <ul>
+            <li><strong>transition-delay:</strong> seconds (5s)</li>
+            <li><strong>transition-duration:</strong> seconds (5s)</li>
+            <li><strong>transition-timing-function:</strong> ease in, ease out, ease, ease in out</li>
+        </ul>
+    </article>
+
+    <!-- Animation in CSS -->
+    <article>
+        <h2 id="animation">18. Animation in CSS</h2>
+        <p>An animation lets an element gradually change from one style to another. (one color to another color) You can change as many CSS properties you want, as many times as you want.</p>
+        <p>To use CSS animation, you must first specify some keyframes for the animation. Keyframes hold what styles the element will have at certain times.</p>
+        <p><strong>Animation properties:</strong></p>
+        <ul>
+            <li>animation-name</li>
+            <li>animation-duration</li>
+            <li>animation-timing-function</li>
+            <li>animation-delay</li>
+            <li>animation-iteration-count</li>
+            <li>animation-direction - alternate, normal, reverse</li>
+        </ul>
+        <pre>
+@keyframes identifier(animation name) {
+    from {
+        property: value;
+    }
+    to {
+        property: value;
+    }
+}
+        </pre>
+        <p>In the example above we have specified when the style will change by using the keywords "from" and "to" (which represents 0% (start) and 100% (complete)).</p>
+        <p>It is also possible to use percent. By using percent, you can add as many style changes as you like.</p>
+        <p>The following example will change the background-color of the <code>&lt;div&gt;</code> element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+    </article>
+        </main>
+    </div>
+
+    <script src="./scripts/learn.js"></script>
+</body>
+</html>

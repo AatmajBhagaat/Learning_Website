@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+} 
+.nav{
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    box-shadow: 0px 5px 5px 2px rgb(233, 232, 232);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav  .Login{
+    display: flex;
+    position: relative;
+    
+
+}
+
+.nav .Login .login{
+    border-radius: 20px;
+    background-color: #b3e6cc;
+    padding: 10px 25px 10px 20px;
+    position: relative;
+    left: -20px;
+    padding-left: 35px;
+}
+.Login a{
+    color: black;
+} 
+
+.nav .Login .login:hover{
+    background-color:   #53c68c;
+}
+
+
+.nav .logo{
+    height: 100px;
+    width: 120px;
+    padding-left: 20px;
+}
+.nav a{
+    text-decoration: none;
+}
+.nav h1{
+    
+    color: rgb(121, 118, 118);
+}
+.nav article h1:hover{
+    transition: 0.1s;
+   border-bottom: 3px solid rgb(243, 180, 20);
+  
+}
+
+
+.Heading{
+    display: grid;
+    height: 650px;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(1,inherit) ;
+    background-color:  #ffffe6;
+   
+}
+.divide{
+    width: 100%;
+    height: 40px;
+    background-color: #effefb;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    position: relative;
+    top: -20px;
+    border-top:2px solid hsl(135, 81%, 78%) ;
+
+}
+ .cont{
+    display: flex; justify-content: center;
+    
+ }
+ .cont #cont{
+
+    font-size: 50px;
+    position: absolute;
+    top: 250px;
+    
+    color: #2a2727;
+    
+    font-weight: 1000;
+}
+.cont h1{
+    font-weight: 600;
+    text-shadow: 3px 1px 3px  #00d9ffca;
+}
+
+.img {
+
+    display: flex;
+    justify-content: center;
+}
+.img #img{
+    position: absolute;
+    top: 200px;
+}
+
+
+.footer
+{
+    height: 100px;
+    width: 100%;
+   display: flex;
+    background-color: black;
+    position: relative;
+    top: 50px;
+}
+.con{
+    display: flex;
+    position: absolute;
+    left: 80%;
+  
+}
+.con i,p{
+    margin:10px 10px 10px 10px;
+}
+.foot-icon {
+    font-size: 30px;
+    position: absolute;
+    left: 90%;
+    top:50px;
+}
+.containts{
+    height: 200px;
+    width: 100%;
+    background-color: #effefb;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: -20px;
+    
+    
+}
+
+.containts .program p{
+    padding: 30px 70px 40px 60px ;
+    padding-left: 70;
+    font-size: 20px;
+  
+    
+}
+
+
+.containts .roadMap p{
+    padding: 30px 50px 40px 60px ;
+    padding-left: 70;
+    font-size: 20px;
+    text-decoration: none;
+     
+}
+
+
+.containts .Learn p{
+    padding: 30px 70px 40px 60px ;
+    padding-left: 70;
+    font-size: 20px;
+  
+    
+}
+
+.containts article{
+    background-color: white;
+    box-shadow: 1px 2px 2px 2px #e8e8e8;
+}
+.containts article:hover{
+    transform: scale(1.05);
+}
+.containts article:active{
+    background-color: #cdf5e0;
+}
+.containts article a{
+    color: rgb(121, 120, 120);
+}
+
